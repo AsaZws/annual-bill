@@ -4,81 +4,19 @@
 <head>
   <meta charset="utf-8">
   <title>年度停车数据</title>
+  <meta content="initial-scale=1.0,user-scalable=no,maximum-scale=1,width=device-width" name="viewport" />
   <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
   <meta name="format-detection" content="telephone=no">
-
-  <!-- Link Swiper's CSS -->
-  <link rel="stylesheet" href="css/swiper.css">
+  <meta content="telephone=no" name="format-detection" />
 
   <script>
-    (function (root) {
-      var docEl = document.documentElement,
-        timer = null,
-        width, last;
-
-      function changeRem() {
-        width = docEl.getBoundingClientRect().width;
-        if (last === width) {
-          return;
-        }
-        last = width;
-        root.rem = (width / 640) * 100;
-        if (/ZTE U930_TD/.test(navigator.userAgent)) {
-          root.rem = root.rem * 1.13;
-        }
-        docEl.style.fontSize = root.rem + 'px';
-      }
-      changeRem();
-      root.addEventListener('resize', function () {
-        clearTimeout(timer);
-        timer = setTimeout(changeRem, 300);
-      });
-      root.addEventListener('orientationchange', function () {
-        clearTimeout(timer);
-        timer = setTimeout(changeRem, 300);
-      });
-    })(window, undefined);
-
+    (function () {
+      var html = document.documentElement;
+      var width = html.getBoundingClientRect().width;
+      var fs = width/16;
+      html.style.fontSize = fs+"px";
+    })()
   </script>
-  <!-- Demo styles -->
-  <style>
-    html,
-    body {
-      position: relative;
-      height: 100%;
-    }
-
-    body {
-      background: #eee;
-      font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
-      font-size: 14px;
-      color: #000;
-      margin: 0;
-      padding: 0;
-    }
-
-    .swiper-container {
-      width: 100%;
-      height: 100%;
-    }
-
-    .swiper-slide {
-      /* Center slide text vertically */
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: -webkit-flex;
-      display: flex;
-      -webkit-box-pack: center;
-      -ms-flex-pack: center;
-      -webkit-justify-content: center;
-      justify-content: center;
-      -webkit-box-align: center;
-      -ms-flex-align: center;
-      -webkit-align-items: center;
-      align-items: center;
-    }
-
-  </style>
   <link rel="stylesheet" href="css/index.css">
 </head>
 
@@ -86,14 +24,14 @@
   <!-- Swiper -->
   <div class="swiper-container">
     <div class="swiper-wrapper">
-      <div class="swiper-slide">
-        <li><img src="images/img1.png" alt="spom1"></li>
-        <li><img src="images/img2.png" alt="spom2"></li>
-        <li><img src="images/img3.png" alt="spom3"></li>
-        <li><img src="images/img4.png" alt="spom4"></li>
-        <!-- <li><img src="images/img5.png" alt="spom5"></li> -->
-        <!-- <li><img src="images/img6.png" alt="spom6"></li> -->
-        <!-- <li><img src="images/img7.png" alt="spom7"></li> -->
+      <div class="swiper-slide first">
+        <img src="images/img1.png" alt="spom1">
+        <img src="images/img2.png" alt="spom2">
+        <img src="images/img3.png" alt="spom3">
+        <img src="images/img4.png" alt="spom4">
+        <img src="images/img5.png" alt="spom5">
+        <img src="images/img6.png" alt="spom6">
+        <img src="images/img7.png" alt="spom7">
       </div>
       <div class="swiper-slide">Slide 2</div>
       <div class="swiper-slide">Slide 3</div>
@@ -105,8 +43,6 @@
       <div class="swiper-slide">Slide 9</div>
       <div class="swiper-slide">Slide 10</div>
     </div>
-    <!-- Add Pagination -->
-    <div class="swiper-pagination"></div>
     <div class="arrow"><img src="images/arrow.png" alt="arrow"></div>
   </div>
 
