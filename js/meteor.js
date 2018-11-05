@@ -12,6 +12,7 @@ function init() {
   stars.height = window.innerHeight;
   //获取context
   context = stars.getContext("2d");
+  console.log(stars.height);
 }
 //创建一个星星对象
 var Star = function() {
@@ -23,7 +24,7 @@ var Star = function() {
   this.getColor = function() {
     var _r = Math.random();
     if (_r < 0.5) {
-      this.color = "#333";
+      this.color = "#f6b617";
     } else {
       this.color = "white";
     }
@@ -113,9 +114,9 @@ var MeteorRain = function() {
   this.getRandomColor = function() {
     var a = Math.ceil(255 - 240 * Math.random());
     //中段颜色
-    this.color1 = "rgba(" + a + "," + a + "," + a + ",1)";
+    this.color1 = "rgba(" + 244 + "," + 207 + "," + 166 + ",1)";
     //结束颜色
-    this.color2 = "black";
+    this.color2 = "#000038";
   };
   /***************重新计算流星坐标的函数******************/
   this.countPos = function() //
