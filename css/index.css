@@ -1,269 +1,298 @@
-
-body{
-    margin: 0;
-    height: 100%;
-    overflow: hidden;
+body {
+  margin: 0;
+  height: 100%;
+  overflow: hidden;
 }
-html{
-    height: 100%;
-    background: #000038;
-    overflow: hidden;
+html {
+  height: 100%;
+  background: #000038;
+  background: -webkit-linear-gradient(90deg,#002a4a,#000037);
+  overflow: hidden;
 }
-ul, li {
+button {
     margin: 0;
     padding: 0;
-    list-style: none;
 }
-img{
-    vertical-align: top;
+ul,
+li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+img {
+  vertical-align: top;
 }
 a {
   text-decoration: none;
 }
 .swiper-container {
-    width: 100%;
-    height: 100%;
+  width: 100%;
+  height: 100%;
+}
+.swiper-wrapper {
+    position: absolute;
+    top: 0;
 }
 .swiper-slide {
-    /* transition: 800ms; */
-    width: 100%;
-    height: 100%;
-    color: #fff;
-    overflow: hidden;
-    position: relative;
-    font-size: 1rem;
+  /* transition: 800ms; */
+  width: 100%;
+  height: 100%;
+  color: #fff;
+  overflow: hidden;
+  position: relative;
+  font-size: 1rem;
 }
 /* 第一頁 */
 .first img {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 999999;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 999999;
 }
 .arrow {
-    width: 1.25rem;
-    height: 1.25rem;
-    position: absolute;
-    z-index: 10;
-    bottom: 1rem;
-    left: 50%;
-    margin-left: -18px;
-    font-size: 1rem;
+  width: 1.25rem;
+  height: 1.25rem;
+  position: absolute;
+  z-index: 10;
+  bottom: 1rem;
+  left: 50%;
+  margin-left: -18px;
+  font-size: 1rem;
 }
 .arrow img {
-    width: 1.25rem;
-    height: 1.25rem;
+  width: 1.25rem;
+  height: 1.25rem;
 }
 /* 第二頁 */
 .second img {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 12;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 12;
 }
 
 .plate {
-    overflow: hidden;
-    position: absolute;
-    width: 76%;
-    top: 6rem;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 12;
+  overflow: hidden;
+  position: absolute;
+  width: 76%;
+  top: 6rem;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 12;
 }
 .plate ul {
-    display: flex;
-    justify-content: center;
-    border: 0.04rem solid #f6b617;
-    border-radius: 0.24rem;
-    background-color: #000038;
+  display: flex;
+  justify-content: center;
+  border: 0.04rem solid #f6b617;
+  border-radius: 0.24rem;
+  background-color: #000038;
 }
 .plate li {
-    width: 1.4rem;
-    height: 1.84rem;
-    line-height: 1.84rem;
-    font-size: 0.72rem;
-    color: #fff;
-    text-align: center;
+  width: 1.4rem;
+  height: 1.84rem;
+  line-height: 1.84rem;
+  font-size: 0.72rem;
+  color: #fff;
+  text-align: center;
 }
 .plate .active {
-    background-color: #f6b617;
-    z-index: 99;
+  /* background-color: #f6b617; */
+  border-right: 1px solid #f6b617;
+  border-left: 1px solid #f6b617;
+  z-index: 99;
 }
 
 .plate li .new {
-    color: #888;
+  color: #ccc;
 }
 .plate li:nth-last-child(1) span {
-    display: block;
-    width: 0.26rem;
-    height: 0.26rem;
-    line-height: 0.2rem;
-    font-size: 0.2rem;
-    border: 0.01rem solid #888;
-    border-radius: 50%;
-    margin: 0.24rem auto 0;
+  display: block;
+  width: 0.52rem;
+  height: 0.52rem;
+  line-height: 0.44rem;
+  font-size: 0.26rem;
+  border: 1px solid #ccc;
+  border-radius: 50%;
+  margin: 0.24rem auto 0;
 }
 .plate li:nth-last-child(1) i {
-    display: block;
-    font-size: 0.2rem;
-    line-height: 0.4rem;
-    margin-bottom: 0.2rem;
+  display: block;
+  font-size: 0.4rem;
+  line-height: 1rem;
+  font-style: normal;
 }
-.plate li:nth-child(2) {
-    /* border-right: 1px solid #f6b617; */
+/* 按钮 */
+.plate .btn {
+    width: 50%;
+    height: 1.48rem;
+    border: 1px solid transparent;
+    outline: none;
+    border-radius: 0.4rem;
+    background-color: #f6b617;
+    color: #fff;
+    font-size: 0.8rem;
+    box-shadow: 0 0.2rem 0.2rem #00001f;
+    margin: 1rem auto;
+}
+.plate .btn:active {
+    background-color: #d39908;
 }
 
 /* 键盘 */
 .keyboard {
-    /* height: 5.4rem; */
-    background-color: #eceef1;
-    position: absolute;
-    bottom: 0;
-    /* display: none; */
-    z-index: 9999;
+  /* height: 5.4rem; */
+  background-color: #eceef1;
+  position: absolute;
+  bottom: 0;
+  /* display: none; */
+  z-index: 9999;
 }
 .keyboard .shut {
-    height: 1.08rem;
-    line-height: 1.08rem;
-    text-align: right;
-    padding: 0 0.32rem;
-    font-size: 0.54rem;
-    background-color: #f9f9f9;
-    color: #333;
-    border-bottom: 1px solid #ddd;
-    border-top: 1px solid #eee;
+  height: 1.08rem;
+  line-height: 1.08rem;
+  text-align: right;
+  padding: 0 0.32rem;
+  font-size: 0.54rem;
+  background-color: #f9f9f9;
+  color: #333;
+  border-bottom: 1px solid #ddd;
+  border-top: 1px solid #eee;
 }
 .keyboard ul {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    padding: 0.32rem 0.16rem 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 0.32rem 0.16rem 0;
 }
 .keyboard li {
-    /* width: 0.66rem; */
-    width: 9%;
-    height: 1.92rem;
-    line-height: 1.92rem;
-    text-align: center;
-    border-radius: 0.32rem;
-    background-color: #fff;
-    font-size: 0.64rem;
-    color: #333;
-    margin: 0 0.16rem 0.32rem 0;
-    box-shadow: 0 0.08rem 0 #aaa;
+  /* width: 0.66rem; */
+  width: 9%;
+  height: 1.92rem;
+  line-height: 1.92rem;
+  text-align: center;
+  border-radius: 0.32rem;
+  background-color: #fff;
+  font-size: 0.64rem;
+  color: #333;
+  margin: 0 0.16rem 0.32rem 0;
+  box-shadow: 0 0.08rem 0 #aaa;
 }
 .keyboard li:active {
-    background-color: #ccc;
+  background-color: #ccc;
 }
 .keyboard li:nth-child(10n) {
-    margin-right: 0;
+  margin-right: 0;
 }
 .keyboard li:nth-last-child(1) {
-    width: 2.08rem;
+  width: 2.08rem;
 }
 
 /* 地区简称的键盘 */
 .area {
-    width: 100%;
-    background-color: #eceef1;
-    position: absolute;
-    bottom: 0;
-    display: none;
-    z-index: 9999;
+  width: 100%;
+  background-color: #eceef1;
+  position: absolute;
+  bottom: 0;
+  display: none;
+  z-index: 9999;
 }
 .area .shut {
-    height: 1.1rem;
-    line-height: 1.1rem;
-    text-align: right;
-    padding: 0 0.32rem;
-    font-size: 0.28rem;
-    background-color: #f9f9f9;
-    color: #333;
-    border-bottom: 1px solid #ddd;
-    border-top: 1px solid #eee;
+  height: 1.1rem;
+  line-height: 1.1rem;
+  text-align: right;
+  padding: 0 0.32rem;
+  font-size: 0.28rem;
+  background-color: #f9f9f9;
+  color: #333;
+  border-bottom: 1px solid #ddd;
+  border-top: 1px solid #eee;
 }
 .area ul {
-    padding: 0.32rem 0.16rem 0;
+  padding: 0.32rem 0.16rem 0;
 }
-.area .area-one, .area .area-tow, .area .area-three, .area .area-four {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+.area .area-one,
+.area .area-tow,
+.area .area-three,
+.area .area-four {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 .area li {
-    /* width: 0.66rem; */
-    width: 9%;
-    height: 2.04rem;
-    line-height: 2.04rem;
-    text-align: center;
-    border-radius: 0.32rem;
-    background-color: #fff;
-    font-size: 0.64rem;
-    color: #333;
-    margin: 0 0.16rem 0.32rem 0;
-    box-shadow: 0 0.08rem 0 #aaa;
+  /* width: 0.66rem; */
+  width: 9%;
+  height: 2.04rem;
+  line-height: 2.04rem;
+  text-align: center;
+  border-radius: 0.32rem;
+  background-color: #fff;
+  font-size: 0.64rem;
+  color: #333;
+  margin: 0 0.16rem 0.32rem 0;
+  box-shadow: 0 0.08rem 0 #aaa;
 }
 .area li:active {
-    background-color: #ccc;
+  background-color: #ccc;
 }
 .area li:nth-child(10n) {
-    margin-right: 0;
+  margin-right: 0;
 }
 
 /* 手机屏幕小于450px的屏幕 */
-@media screen and ( min-width: 450px ) {
-    .keyboard li, .area li {
-        width: 1.32rem;
-    }
+@media screen and (min-width: 450px) {
+  .keyboard li,
+  .area li {
+    width: 1.32rem;
+  }
 }
 /* 手机屏幕大于于370px的屏幕 */
-@media screen and ( max-width: 370px ) {
-    .keyboard li, .area li {
-        /* width: 0.54rem; */
-        width: 9%;
-        height: 1.6rem;
-        line-height: 1.6rem;
-    }
-    .plate li:nth-child(2) {
-        margin-right: 0.2rem;
-    }
-    .plate li {
-        width: 1.32rem;
-    }
-    .plate li:nth-last-child(1) span {
-        display: block;
-        line-height: 0.4rem;
-        margin: 0.2rem auto 0;
-    }
-    .plate li:nth-last-child(1) i {
-        display: block;
-        font-size: 0.4rem;
-        line-height: 0.64rem;
-        /* margin-bottom: 0.2rem; */
-    }
+@media screen and (max-width: 370px) {
+  .keyboard li,
+  .area li {
+    /* width: 0.54rem; */
+    width: 9%;
+    height: 1.6rem;
+    line-height: 1.6rem;
+  }
+  .plate li:nth-child(2) {
+    margin-right: 0.2rem;
+  }
+  .plate li {
+    width: 1.32rem;
+  }
+  .plate li:nth-last-child(1) span {
+    display: block;
+    line-height: 0.4rem;
+    margin: 0.2rem auto 0;
+  }
+  .plate li:nth-last-child(1) i {
+    display: block;
+    font-size: 0.4rem;
+    line-height: 0.64rem;
+    /* margin-bottom: 0.2rem; */
+  }
 }
 
 /* 第三頁 */
 .third img {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 12;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 12;
 }
 .third p {
-    position: absolute;
-    top: 5rem;
-    z-index: 88;
-    font-size: 1rem;
-    color: #fff;
+  position: absolute;
+  top: 5rem;
+  z-index: 88;
+  font-size: 1rem;
+  color: #fff;
 }

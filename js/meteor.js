@@ -1,8 +1,8 @@
 var context;
 var arr = new Array();
-var starCount = 800;
+var starCount = 400;
 var rains = new Array();
-var rainCount = 20;
+var rainCount = 4;
 //初始化画布及context
 function init() {
   //获取canvas
@@ -12,12 +12,11 @@ function init() {
   stars.height = window.innerHeight;
   //获取context
   context = stars.getContext("2d");
-  console.log(stars.height);
 }
 //创建一个星星对象
 var Star = function() {
   this.x = windowWidth * Math.random(); //横坐标
-  this.y = 5000 * Math.random(); //纵坐标
+  this.y = 8000 * Math.random(); //纵坐标
   this.text = "."; //文本
   this.color = "white"; //颜色
   //产生随机颜色
@@ -84,7 +83,7 @@ var MeteorRain = function() {
   this.angle = 30; //倾斜角度
   this.width = -1; //宽度
   this.height = -1; //高度
-  this.speed = 1; //速度
+  this.speed = 5; //速度
   this.offset_x = -1; //横轴移动偏移量
   this.offset_y = -1; //纵轴移动偏移量
   this.alpha = 1; //透明度
