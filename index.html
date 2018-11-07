@@ -1,14 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html>
 <head>
-    <meta charset="utf-8">
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,user-scalable=no">
     <title>年度停车数据</title>
-    <meta content="initial-scale=1.0,user-scalable=no,maximum-scale=1,width=device-width" name="viewport" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
-    <meta name="format-detection" content="telephone=no">
-    <meta content="telephone=no" name="format-detection" />
-
     <script>
         (function () {
             var html = document.documentElement;
@@ -22,25 +17,22 @@
 </head>
 
 <body>
+    <script src="js/swiper/swiper.js"></script>
     <!-- Swiper -->
     <div class="swiper-container">
-        <canvas id="stars"></canvas>
+        <canvas id="stars" class="stars"></canvas>
         <div class="swiper-wrapper">
             <div class="swiper-slide first">
-                <!-- <img src="images/background1.png" alt="background1"> -->
-                <img src="images/img1.png" alt="spom1">
-                <img src="images/img2.png" alt="spom2">
-                <img src="images/img5.png" alt="spom5">
-                <img src="images/img6.png" alt="spom6">
-                <img src="images/img7.png" alt="spom7">
-                <img src="images/img8.png" alt="spom8" class="sopm8">
-                <img src="images/img.png" alt="111">
+                <img src="images/img1.png" alt="spom1" class="spom1">
+                <img src="images/img2.png" alt="spom2" class="spom2">
+                <img src="images/img5.png" alt="spom5" class="spom3">
+                <img src="images/img6.png" alt="spom6" class="spom4">
+                <img src="images/img7.png" alt="spom7" class="spom5">
+                <img src="images/img8.png" alt="spom8" class="sopm6">
             </div>
             <div class="swiper-slide second">
-                <!-- <img src="images/background1.png" alt="background1"> -->
-                <img src="images/img9.png" alt="spom9">
-                <img src="images/img10.png" alt="spom10">
-                <img src="images/img.png" alt="111">
+                <!-- <img src="images/img9.png" alt="spom9"> -->
+                <!-- <img src="images/img.png" alt="111">
                 <div class="plate">
                     <ul id="plate">
                         <li>粤</li>
@@ -57,10 +49,11 @@
                             </div>
                         </li>
                     </ul>
+                    <p>输入车牌，查看年度停车账单</p>
                     <button class="btn">查看账单</button>
-                </div>
+                </div> -->
                 <!-- 键盘 -->
-                <div class="keyboard" id="shutkey">
+                <!-- <div class="keyboard" id="shutkey">
                     <div class="shut" id="shut">关闭</div>
                     <ul id="keyboard">
                         <li>1</li>
@@ -106,9 +99,9 @@
                         <li>警</li>
                         <li>删除</li>
                     </ul>
-                </div>
+                </div> -->
                 <!-- 地区车牌简称 -->
-                <div class="area" id="area">
+                <!-- <div class="area" id="area">
                     <div class="shut" id="shuta">关闭</div>
                     <ul id="keyboarda">
                         <div class="area-one">
@@ -151,24 +144,24 @@
                             <li>川</li>
                         </div>
                     </ul>
-                </div>
+                </div> -->
             </div>
             <div class="swiper-slide third">
-                <img src="images/img11.png" alt="spom11">
+                <!-- <img src="images/img11.png" alt="spom11">
                 <img src="images/img12.png" alt="spom12">
                 <img src="images/img13.png" alt="spom13">
                 <img src="images/img14.png" alt="spom14">
                 <img src="images/img.png" alt="111">
-                <p>这是你在前海SPOM停车的<span>100</span>天</p>
+                <p>这是你在前海SPOM停车的<span>100</span>天</p> -->
             </div>
             <div class="swiper-slide fourth">
-                <img src="images/img15.png" alt="spom15">
+                <!-- <img src="images/img15.png" alt="spom15">
                 <img src="images/img16.png" alt="spom16">
                 <img src="images/img17.png" alt="spom17">
                 <img src="images/img18.png" alt="spom18">
                 <img src="images/img.png" alt="111">
                 <p><strong>2018.8.29</strong>第一次使用前海SPOM停车<span>10</span>小时</p>
-                第一次使用前海SPOM停车了10个小时
+                第一次使用前海SPOM停车了10个小时 -->
             </div>
             <div class="swiper-slide">最早的一次停车是在早上6:00</div>
             <div class="swiper-slide">停车次数（次）</div>
@@ -181,27 +174,9 @@
     </div>
 
     <!-- Swiper JS -->
-    <script src="js/swiper/swiper.js"></script>
     <script src="js/TweenMax/TweenMax.min.js"></script>
     <script src="js/jquery.min.js"></script>
 
-    <!-- Initialize Swiper -->
-    <script>
-        var swiper = new Swiper('.swiper-container', {
-            direction: 'vertical',
-            pagination: {
-                el: '.swiper-pagination',
-                clickable: true,
-            },
-        });
-
-        new TweenMax('.arrow', 1, {
-            y: 16,
-            repeat: -1,
-            yoyo: true,
-        });
-
-    </script>
     <script src="js/index.js"></script>
 </body>
 

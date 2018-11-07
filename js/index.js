@@ -2,13 +2,26 @@
 // var oSpom8 = document.getElementsByClassName(".spom8");
 // oSpom8.style.display = "none";
 
+
+var swiper = new Swiper('.swiper-container', {
+  direction: 'vertical',
+  pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+  },
+});
+
+new TweenMax('.arrow', 1, {
+  y: 16,
+  repeat: -1,
+  yoyo: true,
+});
+
 (function($) {
   // 获取键盘上的关闭按钮
   var oShut = $("#shut");
   // 获取键盘的id
   var oShutkey = $("#shutkey");
-  // 获取车牌框切换的id
-  var oPlate = $("#plate");
   // 获取号码牌的li
   var oPli = $("#plate li");
   // 获取数字拼音软键盘的每个值
@@ -121,7 +134,7 @@
           oShutkey.slideUp(200);
           //
         } else if (oPok < 8) {
-          oPli.eq(7).html('<div class="new"><span>+</span><i>新能源</i></div>');
+          oPli.eq(7).html('<div class="new"><span>+</span><i>新</i></div>');
         }
       } else {
         // 点击数字拼音键盘替换获取车牌框索引值的值
