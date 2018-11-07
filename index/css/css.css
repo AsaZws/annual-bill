@@ -1,0 +1,410 @@
+body {
+    margin: 0;
+    height: 100%;
+    overflow: hidden;
+  }
+  html {
+    height: 100%;
+    background: #f3f3f3;
+    overflow: hidden;
+  }
+  button, h3, p, strong, em {
+      margin: 0;
+      padding: 0;
+  }
+  ul,
+  li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  img {
+    vertical-align: top;
+  }
+  a {
+    text-decoration: none;
+  }
+.plate {
+    position: absolute;
+    width: 76%;
+    top: 44%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 12;
+  }
+  .plate ul {
+    display: flex;
+    justify-content: center;
+    border: 0.04rem solid #3a9efe;
+    border-radius: 0.24rem;
+    background-color: #fff;
+  }
+  .plate li {
+    width: 1.4rem;
+    height: 1.84rem;
+    line-height: 1.84rem;
+    font-size: 0.72rem;
+    color: #3a9efe;
+    text-align: center;
+  }
+  .plate .active {
+    /* background-color: #f6b617; */
+    border-right: 1px solid #3a9efe;
+    border-left: 1px solid #3a9efe;
+    z-index: 99;
+  }
+  
+  .plate li .new {
+    color: #ccc;
+  }
+  .plate li:nth-last-child(1) span {
+    display: block;
+    width: 0.52rem;
+    height: 0.52rem;
+    line-height: 0.44rem;
+    font-size: 0.26rem;
+    border: 1px solid #ccc;
+    border-radius: 50%;
+    margin: 0.24rem auto 0;
+  }
+  .plate li:nth-last-child(1) i {
+    display: block;
+    font-size: 0.4rem;
+    line-height: 1rem;
+    font-style: normal;
+  }
+  /* 按钮 */
+  .plate .btn {
+      width: 100%;
+      height: 1.8rem;
+      line-height: 1.48rem;
+      text-align: center;
+      border: 1px solid transparent;
+      outline: none;
+      border-radius: 0.24rem;
+      background-color: #3a9efe;
+      color: #fff;
+      font-size: 0.8rem;
+      /* box-shadow: 0 0.2rem 0.2rem #0068cc; */
+      margin-left: 50%;
+      margin-top: 1.24rem;
+      transform: translate(-50%, -10%);
+  }
+  .plate .btn:active {
+      background-color: #0082ff;
+  }
+  .plate p {
+    text-align: center;
+    font-size: 0.8rem;
+    line-height: 3rem;
+    color: #333;
+    font-weight: 300;
+  }
+  .plate h3 {
+      width: 100%;
+      position: relative;
+      font-size: 0.64rem;
+      font-weight: 200;
+      text-align: center;
+      color: #888;
+      margin-top: 0.48rem;
+  }
+  .plate strong {
+      display: inline-block;
+      font-size: 0.72rem;
+      text-decoration: underline;
+      color: #3a9efe;
+  }
+  .plate em {
+      display: inline-block;
+      font-size: 0.56rem;
+      font-style: normal;
+      font-weight: 200;
+      line-height: 1.02rem;
+      color: #999;
+  }
+  .plate h3::before, .plate h3::after {
+      content: '';
+      position: absolute;
+      top: 52%;
+      background-color: #ccc;
+      width: 33%;
+      height: 1px;
+  }
+  .plate h3::before {
+      left: 1%;
+  }
+  .plate h3::after {
+      right: 1%;
+  }
+  
+  /* 键盘 */
+  .keyboard {
+    background-color: #eceef1;
+    position: absolute;
+    bottom: 0;
+    /* display: none; */
+    z-index: 9999;
+  }
+  .keyboard .shut {
+    height: 1.08rem;
+    line-height: 1.08rem;
+    text-align: right;
+    padding: 0 0.32rem;
+    font-size: 0.54rem;
+    background-color: #f9f9f9;
+    color: #333;
+    border-bottom: 1px solid #ddd;
+    border-top: 1px solid #eee;
+  }
+  .keyboard ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0.32rem 0.16rem 0;
+  }
+  .keyboard li {
+    width: 9%;
+    height: 1.92rem;
+    line-height: 1.92rem;
+    text-align: center;
+    border-radius: 0.32rem;
+    background-color: #fff;
+    font-size: 0.64rem;
+    color: #333;
+    margin: 0 0.16rem 0.32rem 0;
+    box-shadow: 0 0.08rem 0 #aaa;
+  }
+  .keyboard li:active {
+    background-color: #ccc;
+  }
+  .keyboard li:nth-child(10n) {
+    margin-right: 0;
+  }
+  .keyboard li:nth-last-child(1) {
+    width: 2.08rem;
+  }
+  
+  /* 地区简称的键盘 */
+  .area {
+    width: 100%;
+    background-color: #eceef1;
+    position: absolute;
+    bottom: 0;
+    display: none;
+    z-index: 9999;
+  }
+  .area .shut {
+    height: 1.1rem;
+    line-height: 1.1rem;
+    text-align: right;
+    padding: 0 0.32rem;
+    font-size: 0.28rem;
+    background-color: #f9f9f9;
+    color: #333;
+    border-bottom: 1px solid #ddd;
+    border-top: 1px solid #eee;
+  }
+  .area ul {
+    padding: 0.32rem 0.16rem 0;
+  }
+  .area .area-one,
+  .area .area-tow,
+  .area .area-three,
+  .area .area-four {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .area li {
+    width: 9%;
+    height: 2.04rem;
+    line-height: 2.04rem;
+    text-align: center;
+    border-radius: 0.32rem;
+    background-color: #fff;
+    font-size: 0.64rem;
+    color: #333;
+    margin: 0 0.16rem 0.32rem 0;
+    box-shadow: 0 0.08rem 0 #aaa;
+  }
+  .area li:active {
+    background-color: #ccc;
+  }
+  .area li:nth-child(10n) {
+    margin-right: 0;
+  }
+  
+  /* 手机屏幕小于450px的屏幕 */
+  @media screen and (min-width: 450px) {
+    .keyboard li,
+    .area li {
+      width: 1.32rem;
+    }
+  }
+  /* 手机屏幕大于于370px的屏幕 */
+  @media screen and (max-width: 370px) {
+    .keyboard li,
+    .area li {
+      /* width: 0.54rem; */
+      width: 9%;
+      height: 1.6rem;
+      line-height: 1.6rem;
+    }
+    .plate li:nth-child(2) {
+      margin-right: 0.2rem;
+    }
+    .plate li {
+      width: 1.32rem;
+    }
+    .plate li:nth-last-child(1) span {
+      display: block;
+      line-height: 0.4rem;
+      margin: 0.2rem auto 0;
+    }
+    .plate li:nth-last-child(1) i {
+      display: block;
+      font-size: 0.4rem;
+      line-height: 0.64rem;
+    }
+  }
+
+
+/* 不足15分钟 */
+section .plate-not {
+    font-size: 0.32rem;
+    line-height: 1.6rem;
+    text-align: center;
+    color: #888;
+}
+
+/* 弹出框背景变灰色 */
+.poplayer3 {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: block;
+    left: 0;
+    top: 0;
+    z-index: 99;
+    background-color: #333;
+    -moz-opacity: 0.6;
+    opacity: 0.6;
+    filter: alpha(opacity=60);
+    display: none;
+}
+/*  缴费详情 */
+.detail3 {
+    width: 12rem;
+    height: 14rem;
+    background-color: #fff;
+    color: #333;
+    border-radius: 0.32rem;
+    z-index: 9999999;
+    display: none;
+    padding: 0 0.48rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.detail3 strong {
+    width: 1rem;
+    height: 1rem;
+    line-height: 1rem;
+    border: 1px solid #e64340;
+    border-radius: 50%;
+    text-align: center;
+    position: absolute;
+    top: 0.24rem;
+    right: 0.24rem;
+    font-size: 0.48rem;
+    color: #e64340;
+    text-align: center;
+}
+.detail3 h3 {
+    font-size: 0.8rem;
+    text-align: center;
+    margin-top: 0.56rem;
+    color: #666;
+}
+/* 缴费信息 */
+.detail3 ul {
+    margin: 0.48rem 0.24rem 0 0.24rem;
+    border-bottom: 0.01rem solid #ccc;
+    padding-bottom: 0.48rem;
+    color: #666;
+}
+.detail3 li span {
+    font-size: 0.64rem;
+    line-height: 0.72rem;
+}
+.detail3 li i {
+    font-size: 0.64rem;
+    line-height: 0.48rem;
+    margin-left: 0.48rem;
+    color: #888;
+    font-style: normal;
+}
+.detail3 .alipay {
+    width: 100%;
+    height: 1.6rem;
+    line-height: 1.6rem;
+    margin-top: 0.8rem;
+    text-align: center;
+    font-size: 0.72rem;
+    color: #fff;
+    outline: none;
+    border: none;
+    border-radius: 0.32rem;
+    background-color: #3a9efe;
+}
+.detail3 .alipay:active {
+    background-color: #0082ff;
+}
+
+/* 缴费成功 */
+.payment {
+    margin: 0 auto;
+    background-color: #fff;
+    border-radius: 0.16rem;
+    margin-top: 0.24rem;
+    padding: 0.24rem;
+}
+/* 缴费信息 */
+.payment ul {
+    margin: 0.48rem 0.4rem 0 0.4rem;
+    border-bottom: 0.01rem solid #ccc;
+    padding-bottom: 0.48rem;
+}
+.payment h4 {
+    font-size: 0.32rem;
+    line-height: 0.8rem;
+    color: #666;
+}
+.payment h4 em {
+    font-style: normal;
+    font-size: 0.4rem;
+    color: #e64340;
+}
+.payment strong {
+    font-size: 0.28rem;
+    line-height: 0.48rem;
+    color: #e64340;
+}
+.payment li span {
+    font-size: 0.28rem;
+    line-height: 0.48rem;
+    color: #666;
+}
+.payment li i {
+    font-size: 0.28rem;
+    line-height: 0.48rem;
+    margin-left: 0.8rem;
+}
+.payment p {
+    /* text-align: right; */
+    font-size: 0.24rem;
+    line-height: 0.48rem;
+    color: #aaa;
+}

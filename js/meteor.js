@@ -69,7 +69,7 @@ window.onload = function() {
     rains.push(rain);
   }
   drawMoon(); //绘制月亮
-  //playStars(); //绘制闪动的星星
+  playStars(); //绘制闪动的星星
   playRains(); //绘制流星
 };
 //星星闪起来
