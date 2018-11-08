@@ -193,7 +193,7 @@
       // 车牌输入完整才会显示停车明细
       if (oCar.length > 6) {
         oStrong.text(oCar);
-        // oDetail.html(oStr);
+        oDetail.html(oStr);
       } else {
         alert("请输入完整车牌！");
       }
