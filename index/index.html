@@ -15,9 +15,9 @@
             html.style.fontSize = fs + "px";
         })()
     </script>
-    <div class="plate">
+    <div class="plat">
         <!-- <p>请输入您的车牌号码</p> -->
-        <ul id="plate">
+        <ul id="plate" class="plate">
             <li>粤</li>
             <li>B</li>
             <li class="active"></li>
@@ -33,41 +33,15 @@
             </li>
         </ul>
         <button class="btn">查询缴费</button>
-        <h3>历史车牌</h3>
-        <strong class="history"></strong>
-        <h3>功能说明</h3>
-        <em>1、缴费说明：输入需要缴费的车牌，查询缴费金额，微信缴费后请在系统返回的规定时间内出场，超时会扣除已缴费用继续计费！<br/>2、其他说明：车牌识别异常，导致无法查询到结果的请到收费处人工查询缴费，高级功能请手机绑定后继续使用！</em>
+        <div class="detail">
+            <h3>历史车牌</h3>
+            <strong class="history"></strong>
+        </div>
+        <div>
+            <h3>功能说明</h3>
+            <em>1、缴费说明：输入需要缴费的车牌，查询缴费金额，微信缴费后请在系统返回的规定时间内出场，超时会扣除已缴费用继续计费！<br/>2、其他说明：车牌识别异常，导致无法查询到结果的请到收费处人工查询缴费，高级功能请手机绑定后继续使用！</em>
+        </div>
     </div>
-    <div class="detail3" id="detail3">
-        <strong id="CancelParking3">X</strong>
-        <h3>缴费信息</h3>
-        <!-- 缴费信息 -->
-        <ul>
-            <li>
-                <span>车场名称：</span>
-                <i>鲤鱼门西街停车场</i>
-            </li>
-            <li>
-                <span>车牌号码：</span>
-                <i id="platenum">粤B8888K</i>
-            </li>
-            <li>
-                <span>入场时间：</span>
-                <i>2018-11-08 09:00:00</i>
-            </li>
-            <li>
-                <span>出场时间：</span>
-                <i>2018-11-08 12:00:00</i>
-            </li>
-            <li>
-                <span>停车费用：</span>
-                <i>14.00元</i>
-            </li>
-        </ul>
-        <!-- onClick=window.location.href="select-payment.html" -->
-        <input type="submit" value="支付宝支付" class="alipay">
-    </div>
-    <div class="poplayer3" id="poplayer3"></div>
     <!-- 键盘 -->
     <div class="keyboard" id="shutkey">
         <div class="shut" id="shut">关闭</div>
