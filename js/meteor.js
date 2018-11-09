@@ -5,17 +5,19 @@ var rains = new Array();
 var rainCount = 4;
 //初始化画布及context
 function init() {
+  //获取canvas
+  var stars = document.getElementById("stars");
   windowWidth = window.innerWidth; //当前的窗口的高度
   stars.width = windowWidth;
   stars.height = window.innerHeight;
   //获取context
   context = stars.getContext("2d");
   // 背景图
-  var Back = new Image();
-  Back.src = "./images/background1.png";
-  Back.onload = function () {
-    context.drawImage(this, 0, 0)
-  }
+  // var Back = new Image();
+  // Back.src = "./images/background1.png";
+  // Back.onload = function () {
+  //   context.drawImage(this, 0, 0)
+  // }
 }
 
 
@@ -44,12 +46,6 @@ var Star = function() {
     context.fillText(this.text, this.x, this.y);
   };
 };
-//画月亮
-function drawMoon() {
-  var moon = new Image();
-  moon.src = "./images/moon.png";
-  context.drawImage(moon, -5, -10);
-}
 
 //页面加载的时候
 window.onload = function() {
@@ -68,7 +64,6 @@ window.onload = function() {
     rain.draw();
     rains.push(rain);
   }
-  drawMoon(); //绘制月亮
   playStars(); //绘制闪动的星星
   playRains(); //绘制流星
 };

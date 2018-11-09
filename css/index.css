@@ -9,7 +9,7 @@ html {
   background: -webkit-linear-gradient(90deg,#002a4a,#000037);
   overflow: hidden;
 }
-button {
+button, p {
     margin: 0;
     padding: 0;
 }
@@ -25,12 +25,10 @@ img {
 a {
   text-decoration: none;
 }
-@font-face {
-  font-family: Miao;
-  src: url('../font/HYLeMiaoTiJ.ttf');
-}
+/* swiper框架 */
 .swiper-container {
   height: 100%;
+  font-family:"Microsoft YaHei",微软雅黑,"MicrosoftJhengHei",华文细黑,STHeiti,MingLiu;
 }
 .swiper-wrapper {
   height: 100%;
@@ -43,11 +41,32 @@ a {
   color: #fff;
   overflow: hidden;
 }
-
+/* 向下箭头 */
+.arrow {
+  width: 1.25rem;
+  height: 1.25rem;
+  position: absolute;
+  z-index: 10;
+  bottom: 1rem;
+  left: 50%;
+  margin-left: -0.625rem;
+  font-size: 1rem;
+}
+.arrow img {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+/* 画布流星 */
 .stars {
   position: absolute;
   top: 0;
   left: 0; 
+}
+.img {
+  position: absolute;
+  top: 0.2rem;
+  left: 0.36rem; 
+  width: 96%;
 }
 
 /* 第一页 */
@@ -62,251 +81,78 @@ a {
   width: 12.125rem;
   height: 12.125rem;
   position: absolute;
-  top: 6.4rem;
-  left: 1.9rem;
+  top: 5rem;
+  left: 1.92rem;
 }
 .first .spom2 {
   width: 11.292rem;
   height: 12.354rem;
-  top: 5.34rem;
-  left: 2.3rem;
+  top: 3.884rem;
+  left: 2.328rem;
 }
 .first .spom3 {
   width: 10.708rem;
   height: 2.792rem;
   left: 2.458rem;
-  top: 16.8rem;
+  top: 15.4rem;
+}
+.first .spom4 {
+  width: 10.708rem;
+  left: 2.458rem;
+  top: 19.4rem;
+}
+.first p {
+  text-align: center;
+  font-size: 0.72rem;
+  font-weight: 100;
+  margin-top: 21.4rem;
+}
+.first .btn {
+  position: absolute;
+  top: 23.4rem;
+  left: 25%;
+  width: 50%;
+  height: 1.48rem;
+  border: 1px solid transparent;
+  outline: none;
+  border-radius: 7.4rem;
+  color: #fff;
+  font-size: 0.72rem;
+  box-shadow: 0 0.2rem 0.2rem #00001f;
+  background-color: #f6b617;
+  background: -webkit-linear-gradient(0deg,#8ea8ff,#507cff);
+}
+.first .btn:active {
+  opacity: 0.8;
 }
 
-.arrow {
-  width: 1.25rem;
-  height: 1.25rem;
-  position: absolute;
-  z-index: 10;
-  bottom: 1rem;
-  left: 50%;
-  margin-left: -18px;
-  font-size: 1rem;
-}
-.arrow img {
-  width: 1.25rem;
-  height: 1.25rem;
-}
 /* 第二页 */
+.second {
+  background-size: cover;
+  position: relative;
+}
 .second img {
   position: absolute;
+}
+.second img:nth-child(1) {
+  width: 13rem;
+  right: 0;
+  top: 13rem;
+}
+.second img:nth-child(2) {
   width: 100%;
-  height: 100%;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 12;
-}
-
-.plate {
-  position: absolute;
-  width: 76%;
-  top: 7.2rem;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 12;
-}
-.plate ul {
-  display: flex;
-  justify-content: center;
-  border: 0.04rem solid #f6b617;
-  border-radius: 0.24rem;
-  background-color: #000038;
-}
-.plate li {
-  width: 1.4rem;
-  height: 1.84rem;
-  line-height: 1.84rem;
-  font-size: 0.72rem;
-  color: #fff;
-  text-align: center;
-}
-.plate .active {
-  /* background-color: #f6b617; */
-  border-right: 1px solid #f6b617;
-  border-left: 1px solid #f6b617;
-  z-index: 99;
-}
-
-.plate li .new {
-  color: #ccc;
-}
-.plate li:nth-last-child(1) span {
-  display: block;
-  width: 0.52rem;
-  height: 0.52rem;
-  line-height: 0.44rem;
-  font-size: 0.26rem;
-  border: 1px solid #ccc;
-  border-radius: 50%;
-  margin: 0.24rem auto 0;
-}
-.plate li:nth-last-child(1) i {
-  display: block;
-  font-size: 0.4rem;
-  line-height: 1rem;
-  font-style: normal;
-}
-/* 按钮 */
-.plate .btn {
-    width: 100%;
-    height: 1.48rem;
-    line-height: 1.48rem;
-    text-align: center;
-    border: 1px solid transparent;
-    outline: none;
-    border-radius: 0.4rem;
-    background-color: #f6b617;
-    color: #fff;
-    font-size: 0.8rem;
-    box-shadow: 0 0.2rem 0.2rem #00001f;
-    margin-left: 50%;
-    transform: translate(-50%, -10%);
-}
-.plate .btn:active {
-    background-color: #d39908;
-}
-.plate p {
-  text-align: center;
-  font-size: 0.78rem;
-  font-family: Miao;
-  margin-top: 0.8rem;
-}
-
-/* 键盘 */
-.keyboard {
-  background-color: #eceef1;
-  position: absolute;
+  right: 0;
   bottom: 0;
-  /* display: none; */
-  z-index: 9999;
 }
-.keyboard .shut {
-  height: 1.08rem;
-  line-height: 1.08rem;
-  text-align: right;
-  padding: 0 0.32rem;
-  font-size: 0.54rem;
-  background-color: #f9f9f9;
-  color: #333;
-  border-bottom: 1px solid #ddd;
-  border-top: 1px solid #eee;
+.second img:nth-child(3) {
+  width: 3.48rem;
+  right: 1rem;
+  top: 8rem;
 }
-.keyboard ul {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  padding: 0.32rem 0.16rem 0;
-}
-.keyboard li {
-  width: 9%;
-  height: 1.92rem;
-  line-height: 1.92rem;
-  text-align: center;
-  border-radius: 0.32rem;
-  background-color: #fff;
-  font-size: 0.64rem;
-  color: #333;
-  margin: 0 0.16rem 0.32rem 0;
-  box-shadow: 0 0.08rem 0 #aaa;
-}
-.keyboard li:active {
-  background-color: #ccc;
-}
-.keyboard li:nth-child(10n) {
-  margin-right: 0;
-}
-.keyboard li:nth-last-child(1) {
-  width: 2.08rem;
-}
-
-/* 地区简称的键盘 */
-.area {
-  width: 100%;
-  background-color: #eceef1;
-  position: absolute;
-  bottom: 0;
-  display: none;
-  z-index: 9999;
-}
-.area .shut {
-  height: 1.1rem;
-  line-height: 1.1rem;
-  text-align: right;
-  padding: 0 0.32rem;
-  font-size: 0.28rem;
-  background-color: #f9f9f9;
-  color: #333;
-  border-bottom: 1px solid #ddd;
-  border-top: 1px solid #eee;
-}
-.area ul {
-  padding: 0.32rem 0.16rem 0;
-}
-.area .area-one,
-.area .area-tow,
-.area .area-three,
-.area .area-four {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-.area li {
-  width: 9%;
-  height: 2.04rem;
-  line-height: 2.04rem;
-  text-align: center;
-  border-radius: 0.32rem;
-  background-color: #fff;
-  font-size: 0.64rem;
-  color: #333;
-  margin: 0 0.16rem 0.32rem 0;
-  box-shadow: 0 0.08rem 0 #aaa;
-}
-.area li:active {
-  background-color: #ccc;
-}
-.area li:nth-child(10n) {
-  margin-right: 0;
-}
-
-/* 手机屏幕小于450px的屏幕 */
-@media screen and (min-width: 450px) {
-  .keyboard li,
-  .area li {
-    width: 1.32rem;
-  }
-}
-/* 手机屏幕大于于370px的屏幕 */
-@media screen and (max-width: 370px) {
-  .keyboard li,
-  .area li {
-    /* width: 0.54rem; */
-    width: 9%;
-    height: 1.6rem;
-    line-height: 1.6rem;
-  }
-  .plate li:nth-child(2) {
-    margin-right: 0.2rem;
-  }
-  .plate li {
-    width: 1.32rem;
-  }
-  .plate li:nth-last-child(1) span {
-    display: block;
-    line-height: 0.4rem;
-    margin: 0.2rem auto 0;
-  }
-  .plate li:nth-last-child(1) i {
-    display: block;
-    font-size: 0.4rem;
-    line-height: 0.64rem;
-  }
+.second img:nth-child(4) {
+  width: 1.48rem;
+  left: 1rem;
+  top: 12rem;
 }
 
 /* 第三页 */
