@@ -113,14 +113,14 @@ a {
   left: 25%;
   width: 50%;
   height: 1.48rem;
-  border: 1px solid transparent;
+  border: none;
   outline: none;
-  border-radius: 7.4rem;
+  border-radius: 0.74rem;
   color: #fff;
   font-size: 0.72rem;
   box-shadow: 0 0.2rem 0.2rem #00001f;
   background-color: #f6b617;
-  background: -webkit-linear-gradient(0deg,#8ea8ff,#507cff);
+  background: -webkit-linear-gradient(0deg,#f7d100,#db8900);
 }
 .first .btn:active {
   opacity: 0.8;
@@ -150,9 +150,26 @@ a {
   top: 8rem;
 }
 .second img:nth-child(4) {
+  width: 1.28rem;
+  left: 2rem;
+  top: 24rem;
+}
+.second img:nth-child(5) {
   width: 1.48rem;
-  left: 1rem;
+  left: 0;
   top: 12rem;
+}
+.second p {
+  font-size: 0.72rem;
+  line-height: 1.48rem;
+}
+.second p span {
+  font-size: 1rem;
+  color: #ffc000;
+}
+.second .data {
+  margin-left: 1rem;
+  margin-top: 6rem;
 }
 
 /* 第三页 */

@@ -2,7 +2,7 @@ var context;
 var arr = new Array();
 var starCount = 400;
 var rains = new Array();
-var rainCount = 4;
+var rainCount = 2;
 //初始化画布及context
 function init() {
   //获取canvas
@@ -73,7 +73,6 @@ function playStars() {
     arr[n].getColor();
     arr[n].draw();
   }
-
   setTimeout("playStars()", 100);
 }
 
@@ -98,7 +97,7 @@ var MeteorRain = function() {
     this.alpha = 1; //透明度
     this.getRandomColor();
     //最小长度，最大长度
-    var x = Math.random() * 80 + 150;
+    var x = Math.random() * 80 + 120;
     this.length = Math.ceil(x);
     // x = Math.random()*10+30;
     this.angle = 30; //流星倾斜角
@@ -117,7 +116,7 @@ var MeteorRain = function() {
     //中段颜色
     this.color1 = "rgba(" + 244 + "," + 207 + "," + 166 + ",1)";
     //结束颜色
-    this.color2 = "#000038";
+    this.color2 = "#00073a";
   };
   /***************重新计算流星坐标的函数******************/
   this.countPos = function() //
