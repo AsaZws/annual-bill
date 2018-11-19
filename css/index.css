@@ -9,7 +9,7 @@ html {
   background: -webkit-linear-gradient(90deg,#002a4a,#000037);
   overflow: hidden;
 }
-button, p {
+button, p, div {
     margin: 0;
     padding: 0;
 }
@@ -159,6 +159,11 @@ a {
   left: 0;
   top: 12rem;
 }
+.second img:nth-child(6) {
+  width: 3.8rem;
+  right: 2.56rem;
+  top: 17.6rem;
+}
 .second p {
   font-size: 0.72rem;
   line-height: 1.48rem;
@@ -169,26 +174,118 @@ a {
 }
 .second .data {
   margin-left: 1rem;
-  margin-top: 6rem;
+  margin-top: 4.8rem;
 }
 
 /* 第三页 */
+.third {
+  background-size: cover;
+  position: relative;
+}
 .third img {
   position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 12;
 }
-.third p {
+.third .third-img1 {
+  width: 3.48rem;
+  left: 1rem;
+  top: 12rem;
+}
+.third .third-img2 {
+  width: 3.48rem;
+  right: 1rem;
+  top: 6rem;
+}
+.third .third-img4 {
+  width: 100%;
+  left: 0;
+  bottom: 0;
+}
+.third .figure {
   position: absolute;
-  top: 5rem;
-  z-index: 88;
+  width: 14rem;
+  height: 10rem;
+  bottom: 3.2rem;
+  left: 1rem;
+  border-radius: 0.6rem;
+  background: rgb(163, 175, 233, 0.2);
+}
+.figure .figure-line {
+  display: inline-block;
+  width: 12rem;
+  height: 7rem;
+  border-bottom: 1px solid #c0c0c0;
+  position: relative;
+  background-color: red;
+}
+.figure .figure-left {
+  display: inline-block;
+  width: 1rem;
+  height: 7rem;
+  background: green;
+}
+.figure .figure-left ul {
+  background-color: #c0c0c0;
+}
+.figure .figure-left li {
+  height: 1rem;
+  text-align: right;
+  line-height: 1rem;
+  font-size: 0.56rem;
+}
+.figure-line ul.fr li {
+  height: 1rem;
+  border-bottom: 1px dashed #c0c0c0;
+}
+.figure-line ul.ls {
+  width: 12rem;
+  height: 7rem;
+  position: absolute;
+  bottom: -1px;
+}
+.figure-line ul.ls li {
+  display: inline-block;
+  width: 1.6rem;
+  margin: 0 0.56rem;
+  border-radius: 0.2rem 0.2rem 0 0;
+  background-color: #ffc000;
+  position: relative;
+  bottom: 0;
+}
+.figure-line ul.ls li span {
+  width: 1.6rem;
+  display: inline-block;
+  text-align: center;
+  position: relative;
+  top: -1.2rem;
+  font-size: 0.56rem;
+}
+.figure-bottom {
+  margin-left: 1.2rem;
+  display: inline-block;
+  width: 12rem;
+  height: 1rem;
+  line-height: 1rem;
+  background-color: blue;
+}
+.figure-bottom ul li {
+  display: inline-block;
+  width: 2.74rem;
+  text-align: center;
+  position: relative;
+  font-size: 0.56rem;
+}
+
+.third p {
+  font-size: 0.72rem;
+  line-height: 1.48rem;
+}
+.third p span {
   font-size: 1rem;
-  color: #fff;
-  font-family: Miao;
+  color: #ffc000;
+}
+.third .data {
+  margin-left: 1rem;
+  margin-top: 4.8rem;
 }
 
 /* 第四页 */
