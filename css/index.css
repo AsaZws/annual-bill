@@ -9,14 +9,12 @@ html {
   background: -webkit-linear-gradient(90deg,#002a4a,#000037);
   overflow: hidden;
 }
-button, p, div {
+button, p, div, span, ul, li {
     margin: 0;
     padding: 0;
 }
 ul,
 li {
-  margin: 0;
-  padding: 0;
   list-style: none;
 }
 img {
@@ -169,7 +167,7 @@ a {
   line-height: 1.48rem;
 }
 .second p span {
-  font-size: 1rem;
+  font-size: 0.8rem;
   color: #ffc000;
 }
 .second .data {
@@ -186,14 +184,19 @@ a {
   position: absolute;
 }
 .third .third-img1 {
-  width: 3.48rem;
+  width: 2.88rem;
   left: 1rem;
-  top: 12rem;
+  top: 10.8rem;
 }
 .third .third-img2 {
-  width: 3.48rem;
+  width: 3.08rem;
   right: 1rem;
-  top: 6rem;
+  top: 5rem;
+}
+.third .third-img3 {
+  width: 3.68rem;
+  right: 1.2rem;
+  top: 12.12rem;
 }
 .third .third-img4 {
   width: 100%;
@@ -203,44 +206,30 @@ a {
 .third .figure {
   position: absolute;
   width: 14rem;
-  height: 10rem;
   bottom: 3.2rem;
   left: 1rem;
   border-radius: 0.6rem;
   background: rgb(163, 175, 233, 0.2);
 }
 .figure .figure-line {
+  margin: 1rem 0 0 1rem;
   display: inline-block;
   width: 12rem;
-  height: 7rem;
-  border-bottom: 1px solid #c0c0c0;
+  border-bottom: 1px solid #485d8e;
   position: relative;
-  background-color: red;
 }
-.figure .figure-left {
-  display: inline-block;
-  width: 1rem;
-  height: 7rem;
-  background: green;
-}
-.figure .figure-left ul {
-  background-color: #c0c0c0;
-}
-.figure .figure-left li {
-  height: 1rem;
-  text-align: right;
-  line-height: 1rem;
-  font-size: 0.56rem;
+.figure-line ul.fr {
+  margin-bottom: -1px;
 }
 .figure-line ul.fr li {
   height: 1rem;
-  border-bottom: 1px dashed #c0c0c0;
+  border-bottom: 1px dashed #485d8e;
 }
 .figure-line ul.ls {
   width: 12rem;
-  height: 7rem;
+  height: 6rem;
   position: absolute;
-  bottom: -1px;
+  bottom: 1rem;
 }
 .figure-line ul.ls li {
   display: inline-block;
@@ -260,12 +249,10 @@ a {
   font-size: 0.56rem;
 }
 .figure-bottom {
-  margin-left: 1.2rem;
-  display: inline-block;
+  margin-left: 1rem;
+  margin-bottom: 0.6rem;
   width: 12rem;
-  height: 1rem;
-  line-height: 1rem;
-  background-color: blue;
+  line-height: 0.6rem
 }
 .figure-bottom ul li {
   display: inline-block;
@@ -274,13 +261,12 @@ a {
   position: relative;
   font-size: 0.56rem;
 }
-
 .third p {
   font-size: 0.72rem;
   line-height: 1.48rem;
 }
 .third p span {
-  font-size: 1rem;
+  font-size: 0.8rem;
   color: #ffc000;
 }
 .third .data {
@@ -289,19 +275,75 @@ a {
 }
 
 /* 第四页 */
+.fourth {
+  background-size: cover;
+  position: relative;
+}
 .fourth img {
   position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 12;
+}
+.fourth .score {
+  margin-left: 1rem;
+  margin-top: 4.8rem;
+}
+.fourth .suggest {
+  margin-left: 1rem;
+  margin-top: 4.8rem;
 }
 .fourth p {
+  font-size: 0.72rem;
+  line-height: 1.48rem;
+}
+.fourth strong {
+  display: inline-block;
+  font-size: 0.56rem;
+  padding: 0.4rem;
+  margin: 0.6rem 0.24rem 0 0;
+  background-color: #212a60;
+  border-radius: 0.48rem;
+  font-weight: 100;
+  color: #ced9f7;
+}
+.fourth .btn {
   position: absolute;
-  top: 5rem;
-  z-index: 88;
-  font-size: 1rem;
+  top: 23.4rem;
+  left: 25%;
+  width: 50%;
+  height: 1.48rem;
+  border: none;
+  outline: none;
+  border-radius: 0.74rem;
   color: #fff;
+  font-size: 0.72rem;
+  box-shadow: 0 0.2rem 0.2rem #00001f;
+  background-color: #f6b617;
+  background: -webkit-linear-gradient(0deg,#f7d100,#db8900);
+}
+.fourth .btn:active {
+  opacity: 0.8;
+}
+
+/* 第五页 */
+.fifth {
+  background-size: cover;
+  position: relative;
+}
+.fifth img {
+  position: absolute;
+}
+.fifth .fifth-img1 {
+  width: 6.25rem;
+  top: 5rem;
+  left: 4.73rem;
+}
+.fifth .fifth-img2 {
+  width: 10.21rem;
+  top: 7.5rem;
+  left: 2.71rem;
+}
+
+.fifth .fifth-img16 {
+  width: 14.48rem;
+  top: 17.04rem;
+  left: 0.75rem;
 }
