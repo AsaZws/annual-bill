@@ -30,12 +30,18 @@ var t = new TimelineMax();
     autoAlpha: 0,
     height: 0,
   })
+  .from(".spom3", 0.8, {
+    autoAlpha: 0,
+  }, 0.7)
   .to(".spom3", 0.8, {
     y: 8,
     repeat: -1,
     yoyo: true,
   }, 0.5)
   // 账单
+  .from(".spom4", 1, {
+    autoAlpha: 0,
+  }, 0.8)
   .set(".spom4",{
     transformPerspective: 10,
     transformOrigin: "left top",
@@ -44,9 +50,12 @@ var t = new TimelineMax();
     rotationY: 1800,
     // transformOrigin: "top",
   }, 0.5)
+  .from(".first p", 1, {
+    autoAlpha: 0,
+  })
   .from(".btn",0.3, {
     x: 400,
-  })
+  },2.2)
 
 
 
