@@ -2,7 +2,7 @@
 // var oSpom8 = document.getElementsByClassName(".spom8");
 // oSpom8.style.display = "none";
 
-
+// swiper
 var swiper = new Swiper('.swiper-container', {
   direction: 'vertical',
   pagination: {
@@ -16,6 +16,39 @@ new TweenMax('.arrow', 1, {
   repeat: -1,
   yoyo: true,
 });
+
+// tweenMax
+var t = new TimelineMax();
+  // 圆
+  t.from(".spom1", 1.5, {
+    y: -300,
+    ease: Bounce.easeOut,
+    autoAlpha: 0,
+  })
+  // 手机
+  .from(".spom2", 1.5, {
+    autoAlpha: 0,
+    height: 0,
+  })
+  .to(".spom3", 0.8, {
+    y: 8,
+    repeat: -1,
+    yoyo: true,
+  }, 0.5)
+  // 账单
+  .set(".spom4",{
+    transformPerspective: 10,
+    transformOrigin: "left top",
+  })
+  .to(".spom4", 1.5, {
+    rotationY: 1800,
+    // transformOrigin: "top",
+  }, 0.5)
+  .from(".btn",0.3, {
+    x: 400,
+  })
+
+
 
 // 底部数据加载
 var oUl1 = document.getElementById('bottomUl');
