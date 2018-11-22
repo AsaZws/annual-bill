@@ -132,32 +132,42 @@ a {
 .second img {
   position: absolute;
 }
-.second img:nth-child(1) {
+.second .second-img1 {
   width: 13rem;
   right: 0;
   top: 13rem;
 }
-.second img:nth-child(2) {
+.second .second-img11 {
+  width: 1.479rem;
+  left: 5.136rem;
+  top: 17.404rem;
+}
+.second .second-img111 {
+  width: 2.251rem;
+  right: 1.836rem;
+  top: 20.804rem;
+}
+.second .second-img2 {
   width: 100%;
   right: 0;
   bottom: 0;
 }
-.second img:nth-child(3) {
+.second .second-img3 {
   width: 3.48rem;
   right: 1rem;
   top: 8rem;
 }
-.second img:nth-child(4) {
+.second .second-img4 {
   width: 1.28rem;
   left: 2rem;
   top: 24rem;
 }
-.second img:nth-child(5) {
+.second .second-img5 {
   width: 1.48rem;
   left: 0;
   top: 12rem;
 }
-.second img:nth-child(6) {
+.second .second-img6 {
   width: 3.8rem;
   right: 2.56rem;
   top: 17.6rem;
