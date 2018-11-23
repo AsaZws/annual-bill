@@ -75,26 +75,26 @@ a {
 .first img {
   position: absolute;
 }
-.first .spom1 {
+.first .first-spom1 {
   width: 12.125rem;
   height: 12.125rem;
   position: absolute;
   top: 5rem;
   left: 1.92rem;
 }
-.first .spom2 {
+.first .first-spom2 {
   width: 11.292rem;
   height: 12.354rem;
   top: 3.884rem;
   left: 2.328rem;
 }
-.first .spom3 {
+.first .first-spom3 {
   width: 10.708rem;
   height: 2.792rem;
   left: 2.458rem;
   top: 15.4rem;
 }
-.first .spom4 {
+.first .first-spom4 {
   width: 10.708rem;
   left: 2.458rem;
   top: 19.4rem;
@@ -137,37 +137,37 @@ a {
   right: 0;
   top: 13rem;
 }
-.second .second-img11 {
+.second .second-img2 {
   width: 1.479rem;
   left: 5.136rem;
   top: 17.404rem;
 }
-.second .second-img111 {
+.second .second-img3 {
   width: 2.251rem;
   right: 1.836rem;
   top: 20.804rem;
 }
-.second .second-img2 {
+.second .second-img4 {
   width: 100%;
   right: 0;
   bottom: 0;
 }
-.second .second-img3 {
+.second .second-img5 {
   width: 3.48rem;
   right: 1rem;
   top: 8rem;
 }
-.second .second-img4 {
+.second .second-img6 {
   width: 1.28rem;
   left: 2rem;
   top: 24rem;
 }
-.second .second-img5 {
+.second .second-img7 {
   width: 1.48rem;
   left: 0;
   top: 12rem;
 }
-.second .second-img6 {
+.second .second-img8 {
   width: 3.8rem;
   right: 2.56rem;
   top: 17.6rem;
@@ -180,7 +180,7 @@ a {
   font-size: 0.8rem;
   color: #ffc000;
 }
-.second .data {
+.second .data1 {
   margin-left: 1rem;
   margin-top: 4.8rem;
 }
@@ -279,7 +279,7 @@ a {
   font-size: 0.8rem;
   color: #ffc000;
 }
-.third .data {
+.third .data2 {
   margin-left: 1rem;
   margin-top: 4.8rem;
 }
