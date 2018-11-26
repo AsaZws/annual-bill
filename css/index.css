@@ -203,10 +203,16 @@ a {
   right: 1rem;
   top: 5rem;
 }
-.third .third-img3 {
+.third .alien {
+  position: absolute;
   width: 3.68rem;
+  height: 4.282rem;
+  overflow: hidden;
   right: 1.2rem;
   top: 12.12rem;
+}
+.third .third-img3 {
+  width: 3.68rem;
 }
 .third .third-img4 {
   width: 100%;
@@ -218,7 +224,7 @@ a {
   width: 14rem;
   bottom: 3.2rem;
   left: 1rem;
-  border-radius: 0.6rem;
+  border-radius: 0.6rem 0.6rem 0 0;
   background: rgb(163, 175, 233, 0.2);
 }
 .figure .figure-line {
@@ -237,9 +243,9 @@ a {
 }
 .figure-line ul.ls {
   width: 12rem;
-  height: 6rem;
+  height: 7rem;
   position: absolute;
-  bottom: 1rem;
+  bottom: 0rem;
 }
 .figure-line ul.ls li {
   display: inline-block;
@@ -247,8 +253,11 @@ a {
   margin: 0 0.56rem;
   border-radius: 0.2rem 0.2rem 0 0;
   background-color: #ffc000;
-  position: relative;
-  bottom: 0;
+  text-align: bottom;
+  vertical-align: bottom;
+  /* position: absolute; */
+  /* bottom: 0; */
+  /* transition: 2s; */
 }
 .figure-line ul.ls li span {
   width: 1.6rem;

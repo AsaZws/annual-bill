@@ -158,6 +158,20 @@ function active() {
       t3.staggerFrom(".data2 p", 1, {
         x: 300,
       }, 0.3)
+      .from(".third-img1", 1, {
+        x: -200,
+      }, "-=1")
+      .from(".third-img2", 1, {
+        x: 200,
+        y: -200
+      }, "-=1")
+      .from(".third-img3", 1, {
+        alpha: 0,
+        y: 200,
+      }, "-=1")
+      .from(".figure", 2, {
+        alpha: 0
+      }, "-=1")
       offOn3 = false;
     }else {
       t3.restart();
@@ -177,7 +191,7 @@ function active() {
     var mid1 = document.getElementById("midUl");
     var midLi = mid1.getElementsByTagName("li");
     for (var j = 0; j < figure_height.length; j++) {
-      midLi[j].style.height = figure_height[j] * 0.003 + "rem";
+        midLi[j].style.height = figure_height[j] * 0.003 + "rem";
       midLi[j].firstChild.innerHTML = figure_height[j];
       midLi[j].style.bottom = -(7 - figure_height[j] * 0.003) + "rem";
     }
