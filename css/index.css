@@ -253,11 +253,9 @@ a {
   margin: 0 0.56rem;
   border-radius: 0.2rem 0.2rem 0 0;
   background-color: #ffc000;
-  text-align: bottom;
-  vertical-align: bottom;
-  /* position: absolute; */
-  /* bottom: 0; */
-  /* transition: 2s; */
+  transition: 2s;
+  position: relative;
+  bottom: 0;
 }
 .figure-line ul.ls li span {
   width: 1.6rem;
@@ -297,6 +295,7 @@ a {
 .fourth {
   background-size: cover;
   position: relative;
+  color: #e4f0fe;
 }
 .fourth img {
   position: absolute;
@@ -305,12 +304,39 @@ a {
   margin-left: 1rem;
   margin-top: 4.8rem;
 }
+.score .star {
+  width: 88%;
+  background: rgb(163, 175, 233, 0.2);
+  padding: 0.4rem;
+  margin-top: 0.4rem;
+  border-radius: 0.4rem;
+}
+.score .star ul {
+  border-bottom: dashed #6269a3 1px;
+  line-height: 1.28rem;
+  padding-bottom: 0.1rem;
+}
+.star span {
+  font-size: 0.7rem;
+  margin: 0 5rem 0 0.2rem;
+}
+.star li {
+  display: inline-block;
+  width: 0.7rem;
+  height: 0.7rem;
+  background: url(../images/fo-star2.png) no-repeat;
+  background-size: 0.7rem 0.7rem;
+}
+.score .star .t-star {
+  border: none;
+}
+
 .fourth .suggest {
   margin-left: 1rem;
-  margin-top: 4.8rem;
+  margin-top: 0.8rem;
 }
 .fourth p {
-  font-size: 0.72rem;
+  font-size: 0.8rem;
   line-height: 1.48rem;
 }
 .fourth strong {
