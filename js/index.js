@@ -259,17 +259,25 @@ function active() {
     // 修改建议
     var suggest = document.getElementsByClassName("suggest")[0];
     var oStrong = suggest.getElementsByTagName("strong");
+    var onOff4 = true;
     for (var i = 0; i < oStrong.length; i++) {
       oStrong[i].index = i;
       oStrong[i].onclick = function () {
-        this.style.backgroundColor = "#f6b617";
+        if (onOff4) {
+          this.style.color = "#fff";
+          this.style.backgroundColor = "#f6b617";
+          onOff4 = false;
+        } else {
+          this.style.color = "#e4f0fe";
+          this.style.backgroundColor = "#212a60";
+          onOff4 = true;
+        }
       }
     }
     function star(li) {
       // 评分返回的结果
       // var oscore = [];
       var num = 0;
-      var onOff4 = true;
       for (var i = 0; i < li.length; i++) {
         li[i].index = i;
         // 点击
