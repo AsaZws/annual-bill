@@ -256,6 +256,15 @@ function active() {
     var oLi0 = oUl0.getElementsByTagName("li");
     var oLi1 = oUl1.getElementsByTagName("li");
     var oLi2 = oUl2.getElementsByTagName("li");
+    // 修改建议
+    var suggest = document.getElementsByClassName("suggest")[0];
+    var oStrong = suggest.getElementsByTagName("strong");
+    for (var i = 0; i < oStrong.length; i++) {
+      oStrong[i].index = i;
+      oStrong[i].onclick = function () {
+        this.style.backgroundColor = "#f6b617";
+      }
+    }
     function star(li) {
       // 评分返回的结果
       // var oscore = [];
