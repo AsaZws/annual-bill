@@ -295,16 +295,116 @@ a {
 .fourth {
   background-size: cover;
   position: relative;
-  color: #e4f0fe;
 }
 .fourth img {
   position: absolute;
 }
-.fourth .score {
+.fourth .fourth-img1 {
+  width: 6.25rem;
+  top: 5rem;
+  left: 4.73rem;
+}
+.fourth .fourth-img2 {
+  width: 10.21rem;
+  top: 7.5rem;
+  left: 2.71rem;
+}
+.fourth .fourth-img3 {
+  width: 1.52rem;
+  top: 21.604rem;
+  right: 2.375rem;
+}
+.fourth .fourth-img4 {
+  width: 1.5rem;
+  top: 22.104rem;
+  left: 3.208rem;
+}
+.fourth .fourth-img5 {
+  width: 0.75rem;
+  top: 22.979rem;
+  left: 7.396rem;
+}
+.fourth .fourth-img6 {
+  width: 0.75rem;
+  top: 19.75rem;
+  left: 4.604rem;
+}
+.fourth .fourth-img7 {
+  width: 1.354rem;
+  top: 17.229rem;
+  right: 1.02rem;
+}
+.fourth .fourth-img8 {
+  width: 1.875rem;
+  top: 13.396rem;
+  left: 1.313rem;
+}
+.fourth .fourth-img9 {
+  width: 1.208rem;
+  top: 19.708rem;
+  right: 2.979rem;
+}
+.fourth .fourth-img10 {
+  width: 1.188rem;
+  top: 15.771rem;
+  left: 2.917rem;
+}
+.fourth .fourth-img11 {
+  width: 1rem;
+  top: 14.808rem;
+  right: 2.479rem;
+}
+.fourth .fourth-img12 {
+  width: 1.146rem;
+  top: 15.75rem;
+  right: 2.979rem;
+}
+.fourth .fourth-img13 {
+  width: 2rem;
+  top: 17.042rem;
+  left: 5.375rem;
+}
+.fourth .fourth-img14 {
+  width: 7.479rem;
+  top: 10.708rem;
+  left: 4.021rem;
+}
+.fourth .fourth-img15 {
+  width: 1.146rem;
+  top: 10.896rem;
+  right: 3.229rem;
+}
+.fourth .fourth-img16 {
+  width: 0.688rem;
+  top: 15.25rem;
+  left: 0.917rem;
+}
+
+.fourth .fourth-img17 {
+  width: 14.48rem;
+  top: 17.04rem;
+  left: 0.75rem;
+}
+.fourth .fourth-img18 {
+  width: 5.979rem;
+  top: 13.833rem;
+  left: 4.875rem;
+}
+
+/* 第五页 */
+.fifth {
+  background-size: cover;
+  position: relative;
+  color: #e4f0fe;
+}
+.fifth img {
+  position: absolute;
+}
+.fifth .score {
   margin-left: 1rem;
   margin-top: 4.8rem;
 }
-.score .star {
+.fifth .star {
   width: 88%;
   background: rgb(163, 175, 233, 0.2);
   padding: 0.4rem;
@@ -331,25 +431,25 @@ a {
   border: none;
 }
 
-.fourth .suggest {
+.fifth .suggest {
   margin-left: 1rem;
   margin-top: 0.8rem;
 }
-.fourth p {
+.fifth p {
   font-size: 0.8rem;
   line-height: 1.48rem;
 }
-.fourth strong {
+.fifth strong {
   display: inline-block;
   font-size: 0.56rem;
-  padding: 0.4rem;
+  padding: 0.2rem 0.4rem;
   margin: 0.6rem 0.24rem 0 0;
   background-color: #212a60;
-  border-radius: 0.48rem;
+  border-radius: 0.24rem;
   font-weight: 100;
   color: #ced9f7;
 }
-.fourth .btn {
+.fifth .btn {
   position: absolute;
   top: 23.4rem;
   left: 25%;
@@ -364,106 +464,6 @@ a {
   background-color: #f6b617;
   background: -webkit-linear-gradient(0deg,#f7d100,#db8900);
 }
-.fourth .btn:active {
+.fifth .btn:active {
   opacity: 0.8;
-}
-
-/* 第五页 */
-.fifth {
-  background-size: cover;
-  position: relative;
-}
-.fifth img {
-  position: absolute;
-}
-.fifth .fifth-img1 {
-  width: 6.25rem;
-  top: 5rem;
-  left: 4.73rem;
-}
-.fifth .fifth-img2 {
-  width: 10.21rem;
-  top: 7.5rem;
-  left: 2.71rem;
-}
-.fifth .fifth-img3 {
-  width: 1.52rem;
-  top: 21.604rem;
-  right: 2.375rem;
-}
-.fifth .fifth-img4 {
-  width: 1.5rem;
-  top: 22.104rem;
-  left: 3.208rem;
-}
-.fifth .fifth-img5 {
-  width: 0.75rem;
-  top: 22.979rem;
-  left: 7.396rem;
-}
-.fifth .fifth-img6 {
-  width: 0.75rem;
-  top: 19.75rem;
-  left: 4.604rem;
-}
-.fifth .fifth-img7 {
-  width: 1.354rem;
-  top: 17.229rem;
-  right: 1.02rem;
-}
-.fifth .fifth-img8 {
-  width: 1.875rem;
-  top: 13.396rem;
-  left: 1.313rem;
-}
-.fifth .fifth-img9 {
-  width: 1.208rem;
-  top: 19.708rem;
-  right: 2.979rem;
-}
-.fifth .fifth-img10 {
-  width: 1.188rem;
-  top: 15.771rem;
-  left: 2.917rem;
-}
-.fifth .fifth-img11 {
-  width: 1rem;
-  top: 14.808rem;
-  right: 2.479rem;
-}
-.fifth .fifth-img12 {
-  width: 1.146rem;
-  top: 15.75rem;
-  right: 2.979rem;
-}
-.fifth .fifth-img13 {
-  width: 2rem;
-  top: 17.042rem;
-  left: 5.375rem;
-}
-.fifth .fifth-img14 {
-  width: 7.479rem;
-  top: 10.708rem;
-  left: 4.021rem;
-}
-.fifth .fifth-img15 {
-  width: 1.146rem;
-  top: 10.896rem;
-  right: 3.229rem;
-}
-.fifth .fifth-img16 {
-  width: 0.688rem;
-  top: 15.25rem;
-  left: 0.917rem;
-}
-
-.fifth .fifth-img17 {
-  width: 14.48rem;
-  top: 17.04rem;
-  left: 0.75rem;
-}
-.fifth .fifth-img18 {
-  width: 5.979rem;
-  top: 13.833rem;
-  left: 4.875rem;
 }

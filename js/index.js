@@ -184,7 +184,8 @@ function active() {
         ".data2 p",
         1,
         {
-          x: 300
+          alpha: 0,
+          x: 300,
         },
         0.3
       )
@@ -238,40 +239,39 @@ function active() {
     }
     // 柱状图列表高度加载和顶部数据加载
     var figure_height = ["333", "0", "1860", "120"];
-    var mid1 = document.getElementById("midUl");
-    var midLi = mid1.getElementsByTagName("li");
+    var midLi = document.getElementById("midUl").getElementsByTagName("li");
     for (var j = 0; j < figure_height.length; j++) {
       midLi[j].style.height = figure_height[j] * 0.003 + "rem";
       midLi[j].firstChild.innerHTML = figure_height[j];
       midLi[j].style.bottom = -(7 - figure_height[j] * 0.003) + "rem";
     }
   }
-  // -----------------------第四屏-----------------------
+  // -----------------------第五屏-----------------------
+  
+  // -----------------------第五屏-----------------------
   fourth();
   function fourth() {
     var oStar = document.getElementsByClassName("star")[0];
-    var oUl0 = oStar.getElementsByTagName("ul")[0];
-    var oUl1 = oStar.getElementsByTagName("ul")[1];
-    var oUl2 = oStar.getElementsByTagName("ul")[2];
-    var oLi0 = oUl0.getElementsByTagName("li");
-    var oLi1 = oUl1.getElementsByTagName("li");
-    var oLi2 = oUl2.getElementsByTagName("li");
+    var oLi0 = oStar.getElementsByTagName("ul")[0].getElementsByTagName("li");
+    var oLi1 = oStar.getElementsByTagName("ul")[1].getElementsByTagName("li");
+    var oLi2 = oStar.getElementsByTagName("ul")[2].getElementsByTagName("li");
     // 修改建议
-    var suggest = document.getElementsByClassName("suggest")[0];
-    var oStrong = suggest.getElementsByTagName("strong");
-    var onOff4 = true;
+    var oStrong = document.getElementsByClassName("suggest")[0].getElementsByTagName("strong");
+    // var onOff4 = false;
     for (var i = 0; i < oStrong.length; i++) {
       oStrong[i].index = i;
+      oStrong[i].onOff4 = true;
       oStrong[i].onclick = function () {
-        if (onOff4) {
+        if (this.onOff4) {
           this.style.color = "#fff";
           this.style.backgroundColor = "#f6b617";
-          onOff4 = false;
+          this.onOff4 = false;
         } else {
           this.style.color = "#e4f0fe";
           this.style.backgroundColor = "#212a60";
-          onOff4 = true;
+          this.onOff4 = true;
         }
+        console.log(this.onOff4)
       }
     }
     function star(li) {
