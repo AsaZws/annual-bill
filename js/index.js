@@ -13,6 +13,8 @@ function active() {
           third();
         } else if (myswiper.activeIndex === 3) {
           fourth();
+        } else if (myswiper.activeIndex === 4) {
+          fifth();
         }
       }
     },
@@ -185,7 +187,7 @@ function active() {
         1,
         {
           alpha: 0,
-          x: 300,
+          x: 300
         },
         0.3
       )
@@ -247,32 +249,184 @@ function active() {
     }
   }
   // -----------------------第五屏-----------------------
-  
+var t4 = new TimelineMax();
+var offOn4 = true;
+fourth();
+function fourth() {
+  if (offOn4) {
+    // 恭喜你获得
+    t4.from(".fourth-img1",1, {
+      alpha: 0,
+    }, 1.6)
+    .set(".fourth-img1", {
+      transformPerspective: 10,
+      transformOrigin: "right top",
+    })
+    .to(
+      ".fourth-img1",
+      1,
+      {
+        rotationX: 360,
+        transformOrigin: "right top",
+      }, 1.4)
+    .from(".fourth-img17", 0.2, {
+      alpha: 0,
+      y: 100,
+    }, 0.3)
+    .fromTo(".fourth-img3", 1, {
+      alpha: 0,
+      x: -100,
+      y: 56,
+    },  {
+      alpha: 1,
+      x: 0,
+      y: 0,
+    }, 0.5)
+    .fromTo(".fourth-img4", 1, {
+      alpha: 0,
+      x: 100,
+      y: 56,
+    }, {
+      alpha: 1,
+      x: 0,
+      y: 0,
+    }, 0.5)
+    // 中间金币
+    .from(
+      ".fourth-img5",
+      1.1,
+      {
+        y: -200,
+        alpha: 0,
+        ease: Bounce.easeOut
+      },
+      1
+    )
+    // 左边金币
+    .fromTo(".fourth-img6", 1, {
+      alpha: 0,
+      x: -20,
+      y: 10,
+    }, {
+      alpha: 1,
+      x: 0,
+      y: 0,
+    }, 0.5)
+    // 右边云
+    .from(".fourth-img7", 1, {
+      alpha: 0,
+      x: 100,
+      y: 100,
+    }, 0.5)
+    // 左侧云
+    .from(".fourth-img8", 1, {
+      alpha: 0,
+      x: -100,
+      y: 100,
+    }, 0.5)
+    // 黄色云
+    .from(".fourth-img12", 1, {
+      alpha: 0,
+      x: 100,
+      y: 100,
+    }, 0.5)
+    // 树
+    .from(".fourth-img9", 1, {
+      alpha: 0,
+      width: 0,
+      height: 0,
+      y: -100,
+    }, 0.8)
+    // 左边竖线
+    .from(".fourth-img10", 1.4, {
+      alpha: 0,
+    }, 0.5)
+    // 左边竖线
+    .from(".fourth-img11", 1.4, {
+      alpha: 0,
+    }, 0.5)
+    // 奖杯
+    .from(".fourth-img18", 1, {
+      y: 200,
+    }, 1)
+    // logo
+    .from(".fourth-img13", 1, {
+      alpha: 0,
+      y: -200,
+    }, 2)
+    // 光
+    .from(".fourth-img14", 1, {
+      alpha: 0,
+      y: 100,
+    }, 2.2)
+    // 称号
+    .staggerFrom(".fourth-img2", 1, {
+      alpha: 0,
+      rotation: 1440,
+      y: -100,
+    }, 0.8)
+    // 称号上下浮动
+    .to(".fourth-img2", 1, {
+      y: -10,
+      repeat: -1,
+      yoyo: true,
+    })
+    offOn4 = false;
+  } else {
+    t4.restart();
+  }
+}
+
   // -----------------------第五屏-----------------------
-  fourth();
-  function fourth() {
+  var t5 = new TimelineMax();
+  var offOn5 = true;
+  fifth();
+  function fifth() {
+    if (offOn5) {
+      t5.from(".score p", 1, {
+        alpha: 0,
+        x: -200,
+      })
+      .from(".star", 1, {
+        alpha: 0,
+        height: 0,
+      })
+      .from(".suggest p", 1, {
+        alpha: 0,
+        x: -200,
+      })
+      .staggerFrom(".suggest strong", 1, {
+        alpha: 0,
+        rotation: 360,
+        y: 100,
+      }, 0.5)
+      offOn5 = false;
+    } else {
+      t5.restart();
+    }
     var oStar = document.getElementsByClassName("star")[0];
     var oLi0 = oStar.getElementsByTagName("ul")[0].getElementsByTagName("li");
     var oLi1 = oStar.getElementsByTagName("ul")[1].getElementsByTagName("li");
     var oLi2 = oStar.getElementsByTagName("ul")[2].getElementsByTagName("li");
     // 修改建议
-    var oStrong = document.getElementsByClassName("suggest")[0].getElementsByTagName("strong");
-    // var onOff4 = false;
+    var oStrong = document
+      .getElementsByClassName("suggest")[0]
+      .getElementsByTagName("strong");
     for (var i = 0; i < oStrong.length; i++) {
       oStrong[i].index = i;
-      oStrong[i].onOff4 = true;
-      oStrong[i].onclick = function () {
-        if (this.onOff4) {
+      oStrong[i].onOff = true;
+      oStrong[i].onclick = function() {
+        if (this.onOff) {
           this.style.color = "#fff";
           this.style.backgroundColor = "#f6b617";
-          this.onOff4 = false;
+          this.onOff = false;
         } else {
           this.style.color = "#e4f0fe";
           this.style.backgroundColor = "#212a60";
-          this.onOff4 = true;
+          this.onOff = true;
         }
-        console.log(this.onOff4)
-      }
+        console.log(this.onOff);
+      };
     }
     function star(li) {
       // 评分返回的结果

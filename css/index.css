@@ -323,6 +323,7 @@ a {
   width: 0.75rem;
   top: 22.979rem;
   left: 7.396rem;
+  z-index: 99;
 }
 .fourth .fourth-img6 {
   width: 0.75rem;
@@ -385,10 +386,16 @@ a {
   top: 17.04rem;
   left: 0.75rem;
 }
-.fourth .fourth-img18 {
+.fourth .trophy {
+  position: absolute;
   width: 5.979rem;
+  height: 8.313rem;
+  overflow: hidden;
   top: 13.833rem;
   left: 4.875rem;
+}
+.fourth .trophy .fourth-img18 {
+  width: 5.979rem;
 }
 
 /* 第五页 */
