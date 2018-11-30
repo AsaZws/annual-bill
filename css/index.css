@@ -97,31 +97,13 @@ a {
 .first .first-spom4 {
   width: 10.708rem;
   left: 2.458rem;
-  top: 19.4rem;
+  top: 20.4rem;
 }
 .first p {
   text-align: center;
   font-size: 0.72rem;
   font-weight: 100;
-  margin-top: 21.4rem;
-}
-.first .btn {
-  position: absolute;
-  top: 23.4rem;
-  left: 25%;
-  width: 50%;
-  height: 1.48rem;
-  border: none;
-  outline: none;
-  border-radius: 0.74rem;
-  color: #fff;
-  font-size: 0.72rem;
-  box-shadow: 0 0.2rem 0.2rem #00001f;
-  background-color: #f6b617;
-  background: -webkit-linear-gradient(0deg,#f7d100,#db8900);
-}
-.first .btn:active {
-  opacity: 0.8;
+  margin-top: 22.4rem;
 }
 
 /* 第二页 */
