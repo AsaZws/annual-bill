@@ -109,10 +109,18 @@ function active() {
 
   //   ------------------第二屏--------------------------
   var t2 = new TimelineMax();
+  // 时间数据下的span
+  var oData1_span = document.getElementsByClassName("data1")[0].getElementsByTagName("span");
+  // 时间数据数组
+  var oarr_time = ["120", "1280", "9", "23", "06", "23"];
   var onOff2 = true;
   second();
   function second() {
     if (onOff2) {
+      // 时间数组数据渲染到页面当中
+      for (var i = 0; i < oarr_time.length; i++) {
+        oData1_span[i].innerHTML = oarr_time[i];
+      }
       //   文字
       t2.staggerFrom(
         ".data1 p",
@@ -169,10 +177,18 @@ function active() {
   }
   // --------------------------第三屏--------------------------
   var t3 = new TimelineMax();
+  // 金额数据下的span
+  var oData2_span = document.getElementsByClassName("data2")[0].getElementsByTagName("span");
+  // 金额下的数组
+  var oarr_money = ["2313", "电子钱包", "电子钱包", "1860"];
   var onOff3 = true;
   third();
   function third() {
     if (onOff3) {
+      // 把金额数组的数据渲染到页面当中
+      for (var i = 0; i < oarr_money.length; i++) {
+        oData2_span[i].innerHTML = oarr_money[i];
+      }
       // 文字
       t3.staggerFrom(
         ".data2 p",
