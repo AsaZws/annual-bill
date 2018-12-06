@@ -259,9 +259,16 @@ function active() {
   // -----------------------第五屏-----------------------
   var t4 = new TimelineMax();
   var offOn4 = true;
+  // 车牌称号
+  var img2 = ["./images/fi-title1.png", "./images/fi-title2.png", "./images/fi-title3.png", "./images/fi-title4.png", "./images/fi-title5.png"];
+  // 车牌称号ID
+  var oImg2 = document.getElementsByClassName("fourth-img2")[0];
+
   fourth();
   function fourth() {
     if (offOn4) {
+      // 按车牌
+      oImg2.setAttribute("src", img2[0]);
       // 恭喜你获得
       t4.from(
         ".fourth-img1",
