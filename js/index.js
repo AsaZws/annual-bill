@@ -239,7 +239,7 @@ function active() {
     }
     // ------------------第三屏底部数据加载-----------------------
     var oUl1 = document.getElementById("bottomUl");
-    var figure_bottom = ["微信缴费", "无感支付", "电子钱包", "支付宝付"];
+    var figure_bottom = ["微信缴费", "无感支付", "电子钱包"];
     figure_bottom.sort(function(i, l) {
       return i - l;
     });
@@ -248,7 +248,7 @@ function active() {
       oLi1[k].firstChild.innerHTML = figure_bottom[k];
     }
     // 柱状图列表高度加载和顶部数据加载
-    var figure_height = ["333", "0", "1860", "120"];
+    var figure_height = ["800", "200", "2000"];
     var midLi = document.getElementById("midUl").getElementsByTagName("li");
     for (var j = 0; j < figure_height.length; j++) {
       midLi[j].style.height = figure_height[j] * 0.003 + "rem";
