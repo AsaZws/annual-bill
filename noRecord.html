@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,user-scalable=no">
+<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title>前海SPOM</title> 
+    <script>
+        (function () {
+            var html = document.documentElement;
+            var width = html.getBoundingClientRect().width;
+            var fs = width / 16;
+            html.style.fontSize = fs + "px";
+        })()
+    </script>
+    <link rel="stylesheet" href="css/noRecord.css">
+</head>
+
+<body>
+        <script src="js/swiper/swiper.js"></script>
+        <!-- Swiper -->
+        <div class="swiper-container">
+            <canvas id="stars" class="stars"></canvas>
+            <div class="swiper-wrapper">
+                <!-- first -->
+                <div class="swiper-slide first">
+                    <img src="images/f-circle.png" alt="圆" class="first-spom1">
+                    <img src="images/f-phone.png" alt="手机" class="first-spom2">
+                    <img src="images/f-horizontal-line.png" alt="横线" class="first-spom3">
+                    <img src="images/f-2018-bill.png" alt="2018账单" class="first-spom4">
+                    <p>前海SPOM，让停车更简单！</p>
+                    <div class="arrow"><span>往上滑</span><img src="images/arrow.png" alt="向下"></div>
+                </div>
+                <!-- second -->
+                <div class="swiper-slide second">
+
+                    <div class="arrow"><span>往上滑</span><img src="images/arrow.png" alt="向下"></div>
+                </div>
+                <!-- third -->
+                <div class="swiper-slide third">
+                    <img src="images/on-code.png" alt="二维码" class="code">
+                    <div class="no-record">
+                        <img src="images/on-list.png" alt="无记录">
+                        <p>还没有你的停车账单呢</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    <script src="js/TweenMax/TweenMax.min.js"></script>
+    <script src="js/noRecord.js"></script>
+    <script src="js/fireworks.js"></script>
+</body>
+
+</html>

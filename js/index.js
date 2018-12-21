@@ -12,9 +12,9 @@ function active() {
         } else if (myswiper.activeIndex === 2) {
           third();
         } else if (myswiper.activeIndex === 3) {
-          fourth();
-        } else if (myswiper.activeIndex === 4) {
           fifth();
+        } else if (myswiper.activeIndex === 4) {
+          fourth();
         }
       }
     },
@@ -25,9 +25,21 @@ function active() {
       nextEl: ".arrow"
     },
     // 每一页的滑动时间
-    speed: 500,
+    speed: 800,
     // 每一页不滑动完，禁止滑动下一页
-    preventInteractionOnTransition: true
+    preventInteractionOnTransition: true,
+    // 禁止鼠标模拟
+    simulateTouch : false,
+    // 禁止短距离切换
+    // threshold : 26,
+    // 无法脱离边缘
+    resistanceRatio : 0,
+    // 从边缘开始滑动也触发
+    iOSEdgeSwipeDetection : true,
+    iOSEdgeSwipeThreshold : 50,
+	  touchRatio : 0.1,
+    followFinger : false,
+    initialSlide : 0,
   });
 
   // 向下箭头上下浮动
@@ -109,24 +121,16 @@ function active() {
 
   //   ------------------第二屏--------------------------
   var t2 = new TimelineMax();
-  // 时间数据下的span
-  var oData1_span = document.getElementsByClassName("data1")[0].getElementsByTagName("span");
-  // 时间数据数组
-  var oarr_time = ["120", "1280", "9", "23", "06", "23"];
   var onOff2 = true;
   second();
   function second() {
     if (onOff2) {
-      // 时间数组数据渲染到页面当中
-      for (var i = 0; i < oarr_time.length; i++) {
-        oData1_span[i].innerHTML = oarr_time[i];
-      }
       //   文字
       t2.staggerFrom(
         ".data1 p",
         1,
         {
-          x: -300
+          x: -400
         },
         0.3
       )
@@ -177,28 +181,21 @@ function active() {
   }
   // --------------------------第三屏--------------------------
   var t3 = new TimelineMax();
-  // 金额数据下的span
-  var oData2_span = document.getElementsByClassName("data2")[0].getElementsByTagName("span");
-  // 金额下的数组
-  var oarr_money = ["2313", "电子钱包", "电子钱包", "1860"];
   var onOff3 = true;
   third();
   function third() {
     if (onOff3) {
-      // 把金额数组的数据渲染到页面当中
-      for (var i = 0; i < oarr_money.length; i++) {
-        oData2_span[i].innerHTML = oarr_money[i];
-      }
       // 文字
       t3.staggerFrom(
-        ".data2 p",
-        1,
-        {
-          alpha: 0,
-          x: 300
-        },
-        0.3
-      )
+          ".data2",
+          1,
+          {
+            alpha: 0,
+            x: 300
+          },
+          0.3
+        )
+        // 星球
         .from(
           ".third-img1",
           1,
@@ -207,6 +204,7 @@ function active() {
           },
           "-=1"
         )
+        // 流星
         .from(
           ".third-img2",
           1,
@@ -216,6 +214,27 @@ function active() {
           },
           "-=1"
         )
+        // 底部
+        .from(
+          ".third-img4",
+          1,
+          {
+            alpha: 0,
+            y: 200
+          },
+          "-=1"
+        )
+        // // 钱包
+        .from(
+          ".third-img6",
+          1,
+          {
+            alpha : 0,
+            y: -400
+          },
+          "-=1"
+        )
+        // // 外星人
         .from(
           ".third-img3",
           1,
@@ -225,50 +244,68 @@ function active() {
           },
           "-=1"
         )
+        // // 上面金币
         .from(
-          ".figure",
-          2,
+          ".third-img7",
+          1,
           {
-            alpha: 0
+            alpha : 0
+          },
+          "-=1.2"
+        )
+        // // 后面星星
+        .from(
+          ".third-img5",
+          1,
+          {
+            alpha : 0,
+            x : -180
+          },
+          "-=1.6"
+        )
+        // // 大金币
+        .from(
+          ".third-img12",
+          1,
+          {
+            alpha : 0
+          },
+          "-=1.6"
+        )
+        // // 绿植
+        .from(
+          [".third-img9",".third-img10",".third-img11"]
+          ,
+          1,
+          {
+            alpha: 0,
+            y : 200
+          },
+          "-=1.6"
+        )
+        // // 小金币
+        .staggerFrom(
+          ".gold",
+          1,
+          {
+            alpha: 0,
+            rotation: 360,
+            y: -200
           },
           "-=1"
-        );
+        )
       offOn3 = false;
     } else {
       t3.restart();
-    }
-    // ------------------第三屏底部数据加载-----------------------
-    var oUl1 = document.getElementById("bottomUl");
-    var figure_bottom = ["微信缴费", "无感支付", "电子钱包"];
-    figure_bottom.sort(function(i, l) {
-      return i - l;
-    });
-    var oLi1 = oUl1.getElementsByTagName("li");
-    for (var k = 0; k < figure_bottom.length; k++) {
-      oLi1[k].firstChild.innerHTML = figure_bottom[k];
-    }
-    // 柱状图列表高度加载和顶部数据加载
-    var figure_height = ["800", "200", "2000"];
-    var midLi = document.getElementById("midUl").getElementsByTagName("li");
-    for (var j = 0; j < figure_height.length; j++) {
-      midLi[j].style.height = figure_height[j] * 0.003 + "rem";
-      midLi[j].firstChild.innerHTML = figure_height[j];
-      midLi[j].style.bottom = -(7 - figure_height[j] * 0.003) + "rem";
     }
   }
   // -----------------------第五屏-----------------------
   var t4 = new TimelineMax();
   var offOn4 = true;
-  // 车牌称号
-  var img2 = ["./images/fi-title1.png", "./images/fi-title2.png", "./images/fi-title3.png", "./images/fi-title4.png", "./images/fi-title5.png"];
-  // 车牌称号ID
-  var oImg2 = document.getElementsByClassName("fourth-img2")[0];
 
   fourth();
   function fourth() {
     if (offOn4) {
-      // 按车牌
-      oImg2.setAttribute("src", img2[0]);
       // 恭喜你获得
       t4.from(
         ".fourth-img1",
@@ -458,14 +495,32 @@ function active() {
             rotation: 1440,
             y: -100
           },
-          0.8
+          0.6
         )
         // 称号上下浮动
         .to(".fourth-img2", 1, {
           y: -10,
           repeat: -1,
           yoyo: true
-        });
+        })
+        // 分数
+        .from(
+          ".fraction",
+          1,
+          {
+            alpha: 0
+          },
+          3
+        )
+        // 烟花
+        .from(
+          ".canvas-keleyi",
+          1,
+          {
+            alpha: 0
+          },
+          3
+        )
       offOn4 = false;
     } else {
       t4.restart();
@@ -485,21 +540,44 @@ function active() {
       this.splice(index, 1);
     }
   };
-  // -----------------------第五屏-----------------------
+  // -----------------------第四屏-----------------------
   var t5 = new TimelineMax();
+  // 隐藏往上滑查看账单
+  (function hide() {
+      new TweenMax(".arrow2", 0.1, {
+      alpha : 0.5,
+      y : 200
+    })
+  })();
+  // 显示往上滑查看账单
+  function emerge() {
+    var t7 = new TweenMax(".arrow2", 1, {
+      alpha : 200,
+      y : 1
+    })
+  }
   var offOn5 = true;
   fifth();
   function fifth() {
+    // 提交显示，上滑隐藏
+      var oArrow = document.getElementsByClassName("arrow")[0];
+      var oBtn = document.getElementsByClassName("btn")[0];
+    (function () {
+      oBtn.onclick = function () {
+        this.style.display = "none";
+        emerge();
+      }
+    })();
     if (offOn5) {
-      t5.from(".score p", 1, {
+      t5.from(".score p", 1.4, {
         alpha: 0,
         x: -200
       })
-        .from(".star", 1, {
+        .from(".star", 0.8, {
           alpha: 0,
           height: 0
         })
-        .from(".suggest p", 1, {
+        .from(".suggest p", 0.5, {
           alpha: 0,
           x: -200
         })
@@ -511,14 +589,15 @@ function active() {
             rotation: 360,
             y: 100
           },
-          0.1
+          0.15
         )
         .from(
           ".btn",
           0.3,
           {
             x: 400
-          }
+          },
+          4
         );
       offOn5 = false;
     } else {

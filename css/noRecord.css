@@ -1,0 +1,138 @@
+body {
+  margin: 0;
+  height: 100%;
+  overflow: hidden;
+}
+html {
+  height: 100%;
+  background: #000038;
+  background: -webkit-linear-gradient(90deg, #002a4a, #000037);
+  overflow: hidden;
+}
+html,
+body,
+div,
+p,
+img {
+  margin: 0;
+  padding: 0;
+}
+/* swiper框架 */
+.swiper-container {
+  height: 100%;
+  font-family: "Microsoft YaHei", 微软雅黑, "MicrosoftJhengHei", 华文细黑,
+    STHeiti, MingLiu;
+  outline: none;
+  webkit-focus-ring-color: rgba(0, 0, 0, 0);
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+}
+.swiper-wrapper {
+  height: 100%;
+  position: relative;
+}
+.swiper-slide {
+  transition: 800ms;
+  width: 100%;
+  height: 100%;
+  color: #fff;
+  overflow: hidden;
+}
+
+/* 画布流星 */
+.stars {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/* 向下箭头 */
+.arrow {
+  position: absolute;
+  z-index: 10;
+  bottom: 2rem;
+  left: 50%;
+  margin-left: -0.625rem;
+  font-size: 0.68rem;
+}
+.arrow span {
+  display: block;
+  text-align: center;
+  margin-left: -0.4rem;
+  font-weight: 100;
+}
+.arrow img {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+/* 第一页 */
+.first {
+  background-size: cover;
+  position: relative;
+}
+.first img {
+  position: absolute;
+}
+.first .first-spom1 {
+  width: 12.125rem;
+  height: 12.125rem;
+  position: absolute;
+  top: 3rem;
+  left: 1.92rem;
+}
+.first .first-spom2 {
+  width: 11.292rem;
+  height: 12.354rem;
+  top: 1.884rem;
+  left: 2.328rem;
+}
+.first .first-spom3 {
+  width: 10.708rem;
+  height: 2.792rem;
+  left: 2.458rem;
+  top: 13.4rem;
+}
+.first .first-spom4 {
+  width: 10.708rem;
+  left: 2.458rem;
+  top: 18.4rem;
+}
+.first p {
+  text-align: center;
+  font-size: 0.72rem;
+  font-weight: 100;
+  margin-top: 20.4rem;
+}
+
+/* 第二页 */
+.second {
+  background-size: cover;
+  position: relative;
+}
+.second img {
+  position: absolute;
+}
+
+/* 第三页 */
+.third {
+  background-size: cover;
+  position: relative;
+}
+.no-record {
+  margin-top: 5rem;
+  text-align: center;
+}
+.no-record img {
+  width: 4.104rem;
+}
+.no-record p {
+  color: #e4f0fe;
+  font-size: 0.8rem;
+}
+.third .code {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
