@@ -40,6 +40,8 @@ function active() {
 	  touchRatio : 0.1,
     followFinger : false,
     initialSlide : 0,
+    // 禁止滑动，那个滑块需要禁止就在哪个滑块上加swiper-no-swiping
+    noSwiping: true
   });
 
   // 向下箭头上下浮动
@@ -540,32 +542,39 @@ function active() {
       this.splice(index, 1);
     }
   };
+
   // -----------------------第四屏-----------------------
   var t5 = new TimelineMax();
   // 隐藏往上滑查看账单
   (function hide() {
       new TweenMax(".arrow2", 0.1, {
-      alpha : 0.5,
-      y : 200
+      alpha : 0
     })
   })();
   // 显示往上滑查看账单
   function emerge() {
     var t7 = new TweenMax(".arrow2", 1, {
       alpha : 200,
-      y : 1
+      y: -16,
+      repeat: -1,
+      yoyo: true
     })
   }
   var offOn5 = true;
   fifth();
   function fifth() {
     // 提交显示，上滑隐藏
-      var oArrow = document.getElementsByClassName("arrow")[0];
-      var oBtn = document.getElementsByClassName("btn")[0];
+    var oArrow = document.getElementsByClassName("arrow")[0];
+    var oBtn = document.getElementsByClassName("btn")[0];
+    // 点击按钮
     (function () {
       oBtn.onclick = function () {
+        // 隐藏按钮
         this.style.display = "none";
+        // 显示往上滑
         emerge();
+        // 删除类名可以滑动
+        document.getElementById("swiper").classList.remove("swiper-no-swiping");
       }
     })();
     if (offOn5) {
