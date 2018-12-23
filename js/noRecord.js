@@ -46,8 +46,6 @@ function active() {
   });
 
   // --------------------第一屏-----------------------
-  var html = document.documentElement;
-  var width = html.getBoundingClientRect().width;
   t1 = new TimelineMax();
   // 开关
   var onOff = true;

@@ -628,18 +628,19 @@ function active() {
     var arr = [];
     for (var i = 0; i < oStrong.length; i++) {
       oStrong[i].index = i;
+      // 第4个和第6个默认选择
+      oStrong[3].style.backgroundColor = "#f6b617";
+      oStrong[5].style.backgroundColor = "#f6b617";
       oStrong[i].onOff = true;
       // 给没条建议添加点击事件
       oStrong[i].onclick = function() {
         var arr_strong = this.innerHTML;
         if (this.onOff) {
-          this.style.color = "#fff";
           this.style.backgroundColor = "#f6b617";
           this.onOff = false;
           // 选择添入数组
           arr.push(arr_strong);
         } else {
-          this.style.color = "#e4f0fe";
           this.style.backgroundColor = "#212a60";
           this.onOff = true;
           var arr_strong_f = this.innerHTML;
@@ -652,7 +653,6 @@ function active() {
     // 星星评分
     function star(li, span) {
       // 评分返回的结果
-      // var oscore = [];
       var num = 0;
       for (var i = 0; i < li.length; i++) {
         li[i].index = i;
