@@ -7,11 +7,9 @@ function active() {
       slideChange: function() {
         if (myswiper.activeIndex === 0) {
           first();
-        } /*else if (myswiper.activeIndex === 1) {
+        } else if (myswiper.activeIndex === 1) {
           second();
-        } else if (myswiper.activeIndex === 2) {
-          third();
-        }*/
+        }
       }
     },
     // 默认纵向滑动
@@ -63,6 +61,7 @@ function active() {
           autoAlpha: 0,
           height: 0
         })
+        // 横线
         .from(
           ".first-spom3",
           0.8,
@@ -99,7 +98,6 @@ function active() {
           1.5,
           {
             rotationY: 1800
-            // transformOrigin: "top",
           },
           0.5
         )
@@ -112,5 +110,24 @@ function active() {
       t1.restart();
     }
   }
-
-}
+    //   ------------------第二屏--------------------------
+    var t2 = new TimelineMax();
+    var onOff2 = true;
+    second();
+    function second() {
+      if (onOff2) {
+        //   文字
+        t2.staggerFrom(
+          ".introduction p",
+          1,
+          {
+            x: 400
+          },
+          0.3
+        )
+        onOff2 = false;
+      } else {
+        t2.restart();
+      }
+    }
+  }

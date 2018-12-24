@@ -12,6 +12,7 @@ function active() {
         } else if (myswiper.activeIndex === 2) {
           third();
         } else if (myswiper.activeIndex === 3) {
+          // 4页和5页互换
           fifth();
         } else if (myswiper.activeIndex === 4) {
           fourth();
@@ -29,17 +30,17 @@ function active() {
     // 每一页不滑动完，禁止滑动下一页
     preventInteractionOnTransition: true,
     // 禁止鼠标模拟
-    simulateTouch : false,
+    simulateTouch: false,
     // 禁止短距离切换
     // threshold : 26,
     // 无法脱离边缘
-    resistanceRatio : 0,
+    resistanceRatio: 0,
     // 从边缘开始滑动也触发
-    iOSEdgeSwipeDetection : true,
-    iOSEdgeSwipeThreshold : 50,
-	  touchRatio : 0.1,
-    followFinger : false,
-    initialSlide : 0,
+    iOSEdgeSwipeDetection: true,
+    iOSEdgeSwipeThreshold: 50,
+    touchRatio: 0.1,
+    followFinger: false,
+    initialSlide: 0,
     // 禁止滑动，那个滑块需要禁止就在哪个滑块上加swiper-no-swiping
     noSwiping: true
   });
@@ -52,8 +53,6 @@ function active() {
   });
 
   // --------------------第一屏-----------------------
-  var html = document.documentElement;
-  var width = html.getBoundingClientRect().width;
   t1 = new TimelineMax();
   // 开关
   var onOff = true;
@@ -71,6 +70,7 @@ function active() {
           autoAlpha: 0,
           height: 0
         })
+        // 横线
         .from(
           ".first-spom3",
           0.8,
@@ -107,13 +107,13 @@ function active() {
           1.5,
           {
             rotationY: 1800
-            // transformOrigin: "top",
           },
           0.5
         )
+        // 停车更简单
         .from(".first p", 1, {
           autoAlpha: 0
-        })
+        });
       // 关掉开关
       onOff = false;
     } else {
@@ -127,7 +127,7 @@ function active() {
   second();
   function second() {
     if (onOff2) {
-      //   文字
+      // 文字
       t2.staggerFrom(
         ".data1 p",
         1,
@@ -155,6 +155,7 @@ function active() {
           },
           1
         )
+        // 斜着的箭头
         .from(
           ".second-img3",
           1.5,
@@ -189,14 +190,14 @@ function active() {
     if (onOff3) {
       // 文字
       t3.staggerFrom(
-          ".data2",
-          1,
-          {
-            alpha: 0,
-            x: 300
-          },
-          0.3
-        )
+        ".data2 p",
+        1,
+        {
+          alpha: 0,
+          x: 300
+        },
+        0.3
+      )
         // 星球
         .from(
           ".third-img1",
@@ -226,17 +227,17 @@ function active() {
           },
           "-=1"
         )
-        // // 钱包
+        // 钱包
         .from(
           ".third-img6",
           1,
           {
-            alpha : 0,
+            alpha: 0,
             y: -400
           },
           "-=1"
         )
-        // // 外星人
+        // 外星人
         .from(
           ".third-img3",
           1,
@@ -246,46 +247,45 @@ function active() {
           },
           "-=1"
         )
-        // // 上面金币
+        // 上面金币
         .from(
           ".third-img7",
           1,
           {
-            alpha : 0
+            alpha: 0
           },
           "-=1.2"
         )
-        // // 后面星星
+        // 后面星星
         .from(
           ".third-img5",
           1,
           {
-            alpha : 0,
-            x : -180
+            alpha: 0,
+            x: -180
           },
           "-=1.6"
         )
-        // // 大金币
+        // 大金币
         .from(
           ".third-img12",
           1,
           {
-            alpha : 0
+            alpha: 0
           },
           "-=1.6"
         )
-        // // 绿植
+        // 绿植
         .from(
-          [".third-img9",".third-img10",".third-img11"]
-          ,
+          [".third-img9", ".third-img10", ".third-img11"],
           1,
           {
             alpha: 0,
-            y : 200
+            y: 200
           },
           "-=1.6"
         )
-        // // 小金币
+        // 小金币
         .staggerFrom(
           ".gold",
           1,
@@ -295,7 +295,7 @@ function active() {
             y: -200
           },
           "-=1"
-        )
+        );
       offOn3 = false;
     } else {
       t3.restart();
@@ -330,6 +330,7 @@ function active() {
           },
           1.4
         )
+        // 底座
         .from(
           ".fourth-img17",
           0.2,
@@ -339,6 +340,7 @@ function active() {
           },
           0.3
         )
+        // 右边小车
         .fromTo(
           ".fourth-img3",
           1,
@@ -354,6 +356,7 @@ function active() {
           },
           0.5
         )
+        // 左边小车
         .fromTo(
           ".fourth-img4",
           1,
@@ -522,7 +525,7 @@ function active() {
             alpha: 0
           },
           3
-        )
+        );
       offOn4 = false;
     } else {
       t4.restart();
@@ -545,51 +548,54 @@ function active() {
 
   // -----------------------第四屏-----------------------
   var t5 = new TimelineMax();
-  // 隐藏往上滑查看账单
+  // 进入页面先隐藏往上滑查看账单
   (function hide() {
-      new TweenMax(".arrow2", 0.1, {
-      alpha : 0
-    })
+    new TweenMax(".arrow2", 0.1, {
+      alpha: 0
+    });
   })();
   // 显示往上滑查看账单
   function emerge() {
     var t7 = new TweenMax(".arrow2", 1, {
-      alpha : 200,
+      alpha: 200,
       y: -16,
       repeat: -1,
       yoyo: true
-    })
+    });
   }
   var offOn5 = true;
   fifth();
   function fifth() {
-    // 提交显示，上滑隐藏
-    var oArrow = document.getElementsByClassName("arrow")[0];
+    // 获取按钮
     var oBtn = document.getElementsByClassName("btn")[0];
     // 点击按钮
-    (function () {
-      oBtn.onclick = function () {
+    (function() {
+      oBtn.onclick = function() {
         // 隐藏按钮
         this.style.display = "none";
         // 显示往上滑
         emerge();
         // 删除类名可以滑动
         document.getElementById("swiper").classList.remove("swiper-no-swiping");
-      }
+      };
     })();
     if (offOn5) {
+      // 文字
       t5.from(".score p", 1.4, {
         alpha: 0,
         x: -200
       })
+        // 评分星星
         .from(".star", 0.8, {
           alpha: 0,
           height: 0
         })
+        // 评价建议
         .from(".suggest p", 0.5, {
           alpha: 0,
           x: -200
         })
+        // 评价建议
         .staggerFrom(
           ".suggest strong",
           1,
@@ -600,6 +606,7 @@ function active() {
           },
           0.15
         )
+        // 提交按钮
         .from(
           ".btn",
           0.3,
@@ -618,9 +625,15 @@ function active() {
     var oLi1 = oStar.getElementsByTagName("ul")[1].getElementsByTagName("li");
     var oLi2 = oStar.getElementsByTagName("ul")[2].getElementsByTagName("li");
     // 获取span
-    var oSpan0 = oStar.getElementsByTagName("ul")[0].getElementsByTagName("span")[0];
-    var oSpan1 = oStar.getElementsByTagName("ul")[1].getElementsByTagName("span")[0];
-    var oSpan2 = oStar.getElementsByTagName("ul")[2].getElementsByTagName("span")[0];
+    var oSpan0 = oStar
+      .getElementsByTagName("ul")[0]
+      .getElementsByTagName("span")[0];
+    var oSpan1 = oStar
+      .getElementsByTagName("ul")[1]
+      .getElementsByTagName("span")[0];
+    var oSpan2 = oStar
+      .getElementsByTagName("ul")[2]
+      .getElementsByTagName("span")[0];
     // 修改建议
     var oStrong = document
       .getElementsByClassName("suggest")[0]
@@ -638,7 +651,7 @@ function active() {
         if (this.onOff) {
           this.style.backgroundColor = "#f6b617";
           this.onOff = false;
-          // 选择添入数组
+          // 评价建议添入数组
           arr.push(arr_strong);
         } else {
           this.style.backgroundColor = "#212a60";
@@ -656,24 +669,24 @@ function active() {
       var num = 0;
       for (var i = 0; i < li.length; i++) {
         li[i].index = i;
-        // 点击
+        // 给每个星星添加点击事件
         li[i].onclick = function() {
           for (var i = 0; i < li.length; i++) {
             li[i].style.backgroundImage = "url('./images/fo-star2.png')";
           }
-          // 当点击当前星星，之前的都点亮包含自己
+          // 当点击当前星星，之前的都点亮包含自己，星星高亮个数
           num = this.index + 1;
           for (var i = 0; i <= this.index; i++) {
             li[i].style.backgroundImage = "url('./images/fo-star1.png')";
           }
+          // 获取点击的那个文字
           var oSpan_s = span.innerHTML;
-          // 先清空
-          // oscore.push(oSpan_s);
           console.log(oSpan_s);
           console.log(num);
         };
       }
     }
+    // 三个星星评价分别执行
     star(oLi0, oSpan0);
     star(oLi1, oSpan1);
     star(oLi2, oSpan2);

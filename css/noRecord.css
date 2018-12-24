@@ -113,6 +113,38 @@ img {
 .second img {
   position: absolute;
 }
+.second p {
+  font-size: 0.72rem;
+  line-height: 1.36rem;
+  margin-bottom: 0.36rem;
+}
+.second p span {
+  font-size: 0.8rem;
+  color: #ffc000;
+}
+.second .introduction {
+  width: 94%;
+  margin: 0 auto;
+  margin-top: 3.8rem;
+}
+.second .under {
+  width: 100%;
+  bottom: 0;
+}
+.second .ball1 {
+  width: 0.917rem;
+  top: 4.083rem;
+}
+.second .ball2 {
+  width: 1.479rem;
+  top: 0;
+  right: 0;
+}
+.second .ball3 {
+  width: 0.938rem;
+  top: 9.667rem;
+  right: 0;
+}
 
 /* 第三页 */
 .third {
@@ -135,4 +167,16 @@ img {
   top: 0;
   left: 0;
   width: 100%;
+}
+.third .ball4 {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+.third .ball5 {
+  position: absolute;
+  width: 10.88rem;
+  top: 2.8rem;
+  left: 2.48rem;
 }
