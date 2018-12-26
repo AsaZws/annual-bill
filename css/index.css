@@ -6,12 +6,17 @@ body {
 html {
   height: 100%;
   background: #000038;
-  background: -webkit-linear-gradient(90deg,#002a4a,#000037);
+  background: -webkit-linear-gradient(90deg, #002a4a, #000037);
   overflow: hidden;
 }
-button, p, div, span, ul, li {
-    margin: 0;
-    padding: 0;
+button,
+p,
+div,
+span,
+ul,
+li {
+  margin: 0;
+  padding: 0;
 }
 ul,
 li {
@@ -26,7 +31,8 @@ a {
 /* swiper框架 */
 .swiper-container {
   height: 100%;
-  font-family:"Microsoft YaHei",微软雅黑,"MicrosoftJhengHei",华文细黑,STHeiti,MingLiu;
+  font-family: "Microsoft YaHei", 微软雅黑, "MicrosoftJhengHei", 华文细黑,
+    STHeiti, MingLiu;
   outline: none;
   webkit-focus-ring-color: rgba(0, 0, 0, 0);
   -webkit-tap-highlight-color: transparent;
@@ -43,6 +49,61 @@ a {
   color: #fff;
   overflow: hidden;
 }
+
+/* music */
+@-webkit-keyframes reverseRotataZ {
+  0% {
+    -webkit-transform: rotateZ(0deg);
+  }
+  100% {
+    -webkit-transform: rotateZ(-360deg);
+  }
+}
+@-webkit-keyframes rotataZ {
+  0% {
+    -webkit-transform: rotateZ(0deg);
+  }
+  100% {
+    -webkit-transform: rotateZ(360deg);
+  }
+}
+.music {
+  position: fixed;
+  right: 0.8rem;
+  top: 1rem;
+  margin-top: 0;
+  display: inline-block;
+  z-index: 99999999;
+}
+.music a {
+  display: inline-block;
+  width: 1.4rem;
+  height: 1.4rem;
+  overflow: hidden;
+  background: url("../images/music-on.png") no-repeat;
+  background-size: 100%;
+}
+.music a audio {
+  width: 100%;
+  height: 56px;
+}
+.music a.stop {
+  background-position: left bottom;
+}
+.music a.on {
+  background-position: 0px 1px;
+  -webkit-animation: reverseRotataZ 1.2s linear infinite;
+}
+#music_play_filter {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99999998;
+}
+
 /* 向下箭头 */
 .arrow {
   position: absolute;
@@ -50,7 +111,7 @@ a {
   bottom: 2rem;
   left: 50%;
   margin-left: -0.625rem;
-  font-size: .68rem;
+  font-size: 0.68rem;
 }
 .arrow span {
   display: block;
@@ -68,7 +129,7 @@ a {
   bottom: 2rem;
   left: 50%;
   margin-left: -0.625rem;
-  font-size: .68rem;
+  font-size: 0.68rem;
 }
 .arrow2 span {
   display: block;
@@ -84,12 +145,12 @@ a {
 .stars {
   position: absolute;
   top: 0;
-  left: 0; 
+  left: 0;
 }
 .img {
   position: absolute;
   top: 0.2rem;
-  left: 0.36rem; 
+  left: 0.36rem;
   width: 96%;
 }
 
@@ -678,7 +739,7 @@ a {
   font-size: 0.72rem;
   box-shadow: 0 0.2rem 0.2rem #00001f;
   background-color: #f6b617;
-  background: -webkit-linear-gradient(0deg,#f7d100,#db8900);
+  background: -webkit-linear-gradient(0deg, #f7d100, #db8900);
 }
 .fifth .btn:active {
   opacity: 0.8;

@@ -1,0 +1,143 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>视频监控</title>
+    <style>
+      a,
+      body,
+      div,
+      h1,
+      h2,
+      h3,
+      html,
+      img,
+      li,
+      span,
+      ul,
+      button,
+      video,
+      source,
+      var input {
+        margin: 0;
+        border: 0;
+        padding: 0;
+        font-style: normal;
+        color: #323232;
+        box-sizing: border-box;
+        -moz-box-sizing: border-box; /* Firefox */
+        -webkit-box-sizing: border-box; /* Safari */
+      }
+      html,
+      body {
+        background: #fff;
+      }
+      ul {
+        text-decoration: none;
+        list-style-type: none;
+        margin-top: 1%;
+      }
+      .video_list > li {
+        float: left;
+        width: 552px;
+        text-align: center;
+        padding-top: 446px;
+        margin-left: 2%;
+        margin-bottom: 26px;
+        border: 1px solid #ccc;
+        position: relative;
+      }
+      .video_list > li > div {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 550px;
+        height: 400px;
+        background-color: #f2f2f2;
+      }
+      .video_list > li > div > span {
+        display: inline-block;
+        text-align: center;
+        /* margin-top: 50%;
+        -webkit-transform: translateY(-50%);
+        transform: translateY(-50%); */
+      }
+      .video_list .btn {
+        text-align: left;
+      }
+      .video_list .btn button {
+        outline: none;
+        padding: 6px 12px;
+        background-color: #eee;
+        color: #000;
+        cursor: pointer;
+        margin: 4px;
+        font-size: 12px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+      }
+      .video_list .btn button:hover {
+        opacity: 0.8;
+        box-shadow: 0 0 4px #989aa6;
+      }
+      .video_list .btn button:active {
+        opacity: 0.6;
+      }
+    </style>
+  </head>
+  <body>
+    <ul class="video_list">
+      <li>
+        <div>
+          <span>
+            <video width="550" height="400" controls="controls">
+              <source src="images/moniter.mp4" type="images/moniter.mp4" />
+            </video>
+          </span>
+          <div class="btn">
+            <button>打开视频</button> <button>关闭视频</button>
+            <button>打开灯光</button> <button>关闭灯光</button>
+          </div>
+        </div>
+      </li>
+      <li>
+        <div>
+          <span><img src="images/moniter.jpg" alt="无监控画面"/></span>
+          <div class="btn">
+            <button>打开视频</button> <button>关闭视频</button>
+            <button>打开灯光</button> <button>关闭灯光</button>
+          </div>
+        </div>
+      </li>
+      <li>
+        <div>
+          <span><img src="images/moniter.jpg" alt="无监控画面"/></span>
+          <div class="btn">
+            <button>打开视频</button> <button>关闭视频</button>
+            <button>打开灯光</button> <button>关闭灯光</button>
+          </div>
+        </div>
+      </li>
+      <li>
+        <div>
+          <span><img src="images/moniter.jpg" alt="无监控画面"/></span>
+          <div class="btn">
+            <button>打开视频</button> <button>关闭视频</button>
+            <button>打开灯光</button> <button>关闭灯光</button>
+          </div>
+        </div>
+      </li>
+      <li>
+        <div>
+          <span><img src="images/moniter.jpg" alt="无监控画面"/></span>
+          <div class="btn">
+            <button>打开视频</button> <button>关闭视频</button>
+            <button>打开灯光</button> <button>关闭灯光</button>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </body>
+</html>

@@ -20,6 +20,14 @@
     <!-- Swiper -->
     <div class="swiper-container">
         <canvas id="stars" class="stars"></canvas>
+        <!-- music -->
+        <div class="music" id="musicControl">
+            <a id="mc_play" class="on">
+                <audio id="musicfx" loop="loop" autoplay="autoplay">
+                    <source src="music/music.mp3" type="audio/mpeg">
+                </audio>
+            </a>
+        </div>
         <div class="swiper-wrapper">
             <div class="swiper-slide first">
                 <img src="images/f-circle.png" alt="圆" class="first-spom1">
@@ -158,7 +166,7 @@
             
             <div class="swiper-slide fourth">
                 <img src="images/fi-congratulations.png" alt="恭喜" class="fourth-img1">
-                <img src="images/fi-title.png" alt="称号" class="fourth-img2">
+                <img src="images/fi-title1.png" alt="称号" class="fourth-img2">
                 <img src="images/fi-base.png" alt="底座" class="fourth-img17">
                 <img src="images/fi-car1.png" alt="右边小车" class="fourth-img3">
                 <img src="images/fi-car2.png" alt="左边小车" class="fourth-img4">
@@ -182,6 +190,7 @@
     </div>
 
     <!-- Swiper JS -->
+    <script src="http://libs.baidu.com/jquery/2.1.4/jquery.min.js"></script>
     <script src="js/TweenMax/TweenMax.min.js"></script>
     <script src="js/index.js"></script>
     <script src="js/meteor.js"></script>

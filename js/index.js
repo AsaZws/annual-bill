@@ -692,3 +692,44 @@ function active() {
     star(oLi2, oSpan2);
   }
 }
+
+// 音乐播放
+function play_music() {
+  if ($("#mc_play").hasClass("on")) {
+    $("#mc_play audio")
+      .get(0)
+      .pause();
+    $("#mc_play").attr("class", "stop");
+  } else {
+    $("#mc_play audio")
+      .get(0)
+      .play();
+    $("#mc_play").attr("class", "on");
+  }
+  $("#music_play_filter").hide();
+   //阻止冒泡
+  event.stopPropagation();
+}
+// 自动播放
+function audioAutoPlay() {
+  $("#mc_play audio")
+    .get(0)
+    .play();
+  document.addEventListener(
+    "WeixinJSBridgeReady",
+    function() {
+      $("#mc_play audio")
+        .get(0)
+        .play();
+    },
+    false
+  );
+}
+// 打开自动加载自动播放函数
+$(document).ready(function() {
+  audioAutoPlay();
+});
+// 点击按钮播放
+$("#mc_play").click(function() {
+  play_music();
+});
